@@ -1,0 +1,281 @@
+@font-face {
+	font-family: OpenSans;
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: OpenSans, sans-serif;
+}
+.content-wrap {
+	max-width: 1440px;
+	margin: 0 auto;
+	border: 1px solid black;
+}
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+header {
+	padding: 20px 0 5px 25px;
+	display: flex;
+	align-items: center;
+}
+nav a {
+	font-size: 14px;
+	line-height: 21px;
+	color: #444343;
+}
+.navbar-toggler {
+	display: none;
+}
+.navbar-nav {
+	display: flex;
+}
+.nav-links {
+	list-style: none;
+	padding: 0 10px 0 45px;
+	margin: 0;
+	display: flex;
+}
+.nav-link {
+	display: block;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 21px;
+	color: #4d4d4d;
+	padding: 0 10px;
+	white-space: nowrap;
+}
+.nav-link.akcii {
+	display: none;
+}
+.nav-link:hover {
+	text-decoration: underline;
+}
+.lang-select {
+	border: 1px solid #c4c4c4;
+	border-radius: 7px;
+	width: 55px;
+	align-self: flex-start;
+	outline: none;
+	color: #c4c4c4;
+	font-size: 12px;
+	padding: 4px 8px;
+	appearance: none;
+	background: url('../img/caret.png') no-repeat 80% 50%;
+	cursor: pointer;
+}
+.soc-icons {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 0 45px;
+	display: flex;
+}
+.mob-ru, .mob-en, .mob-menu-title, .mob-logo {
+	display: none;
+}
+.soc-icon {
+	display: block;
+	text-decoration: none;
+	width: 24px;
+	height: 24px;
+	margin: 1px;
+	background-image: url('../img/icon-sprite-desktop.png');
+}
+.soc-icon.yt {
+	background-position: -1px 50%;
+}
+.soc-icon.vk {
+	background-position: -25px 50%;
+}
+.soc-icon.inst {
+	background-position: -49px 50%;
+}
+.soc-icon.fb {
+	background-position: -73px 50%;
+}
+.soc-icon.zen {
+	background-position: -97px 50%;
+}
+.soc-icon.tg {
+	background-position: -121px 50%;
+}
+.nav-booking {
+	display: block;
+	border: none;
+	width: 137px;
+	height: 38px;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+	background-color: #14BDE1;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 30px #FFFFFF;
+	border-radius: 7px;
+	cursor: pointer;
+	margin-left: 45px;
+	transition: .2s;
+	position: relative;
+	top: -10px;
+}
+.nav-booking:hover {
+	box-shadow: none;
+}
+@media (max-width: 1279px) {
+	header {
+		justify-content: space-between;
+		padding: 20px 45px 5px 25px;
+		position: relative;
+	}
+	.navbar-toggler {
+		display: block;
+		position: relative;
+		top: -7px;
+	}
+	.navbar-nav {
+		flex-direction: column;
+		width: 340px;
+		background-color: #176794;
+		color: white;
+		padding: 15px 0;
+		position: absolute;
+		top: 100%;
+		transform: translateX(77px);
+		/*opacity: 0;*/
+		transition: .3s;
+	}
+	.navbar-nav.active {
+		transform: translateX(-263px);
+		opacity: 1;
+	}
+	.lang-select {
+		display: none;
+	}
+	.mob-logo {
+		display: block;
+		position: relative;
+		padding: 0 15px 15px;
+	}
+	.close-btn {
+		position: absolute;
+		right: 20px;
+		top: 10px;
+		cursor: pointer;
+	}
+	.mob-menu-title {
+		display: block;
+		border-top: 1px solid #fff;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 700;
+		padding: 25px 0;
+	}
+	.nav-links {
+		flex-direction: column;
+		padding: 0;
+		order: 1;
+	}
+	.nav-link.akcii {
+		display: block;
+	}
+	.nav-link {
+		color: white;
+		font-size: 12px;
+		line-height: 16px;
+		margin: 17px 30px 17px 70px;
+		padding: 0;
+		position: relative;
+	}
+	.nav-link:before {
+		position: absolute;
+		left: -40px;
+		top: -2px;
+	}
+	.nav-link.hotels:before {
+		content: url('../img/hotels-icon.png');
+	}
+	.nav-link.about-novostar:before {
+		content: url('../img/about-icon.png');
+	}
+	.nav-link.novostar-life:before {
+		content: url('../img/life-icon.png');
+	}
+	.nav-link.info:before {
+		content: url('../img/info-icon.png');
+	}
+	.nav-link.your-booking:before {
+		content: url('../img/your-booking-icon.png');
+	}
+	.nav-link.akcii:before {
+		content: url('../img/akcii-icon.png');
+	}
+	.nav-link:after {
+		content: url('../img/caret-white.png');
+		position: absolute;
+		right: 10px;
+	}
+	.nav-booking {
+		position: static;
+		order: 2;
+		box-shadow: none;
+		width: 240px;
+		margin: 100px auto 60px;
+		color: #444343;
+		background-color: #fff;
+	}
+	.soc-icons {
+		order: 3;
+		border-top: 1px solid #fff;
+		margin: 0;
+		padding: 7px 15px;
+		justify-content: flex-end;
+		position: relative;
+	}
+	.mob-ru, .mob-en {
+		display: inline;
+		position: absolute;
+		color: white;
+		text-decoration: none;
+		font-size: 12px;
+		top: 15px;
+	}
+	.mob-ru {
+		left: 35px;
+	}
+	.mob-en {
+		left: 60px;
+	}
+	.soc-icon.zen {
+		display: none;
+	}
+	.soc-icon {
+		width: 30px;
+		height: 30px;
+		margin: 4px;
+		background-image: url('../img/icon-sprite-mobile.png');
+	}
+	.soc-icon.yt {
+		background-position: 0 50%;
+	}
+	.soc-icon.vk {
+		background-position: -38px 50%;
+	}
+	.soc-icon.inst {
+		background-position: -76px 50%;
+	}
+	.soc-icon.fb {
+		background-position: -114px 50%;
+	}
+	.soc-icon.tg {
+		background-position: -152px 50%;
+	}
+}
+@media (max-width: 400px) {
+	header {
+		justify-content: space-between;
+		padding: 20px 25px 5px;
+	}
+}
