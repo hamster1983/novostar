@@ -2,6 +2,10 @@
 	font-family: OpenSans;
 	src: url(../fonts/OpenSans-Regular.ttf);
 }
+@font-face {
+	font-family: OpenSansExtraBold;
+	src: url(../fonts/OpenSans-ExtraBold.ttf);
+}
 * {
 	box-sizing: border-box;
 }
@@ -278,4 +282,192 @@ nav a {
 		justify-content: space-between;
 		padding: 20px 25px 5px;
 	}
+}
+
+main {
+	/height: 525px;
+	background-image: url('../img/hat-fon.jpg');
+	background-size: cover;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.main-left {
+	width: 47%;
+}
+.main-right {
+	width: 53%;
+	overflow: hidden;
+	padding-bottom: 50px;
+	padding-left: 5px;
+}
+.main-bottom {
+	width: 100%;
+}
+
+
+.hotel-card {
+	display: block;
+	text-decoration: none;
+	width: 240px;
+	height: 270px;
+	color: #fff;
+	background-color: #14BDE1;
+	border-radius: 15px;
+	overflow: hidden;
+	/*filter: drop-shadow(9px 8px 10px rgba(0, 0, 0, 0.5));*/
+	box-shadow: 12px 12px 10px rgba(0,0,0,0.5);
+	transition: .3s;
+	position: relative;
+}
+.hotel-card:hover {
+	/*filter: none;*/
+	box-shadow: none;
+}
+.hotel-card.new:before {
+	content: url('../img/new-line.png');
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.hotel-card.akc:before {
+	content: url('../img/akcia.png');
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.hotel-card.trip:before {
+	content: url('../img/trip.png');
+	position: absolute;
+	left: 8px;
+	top: 8px;
+}
+.hotel-card.tour360:after {
+	content: url('../img/360.png');
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	transition: .8s;
+}
+.hotel-card.tour360:hover:after {
+	transform: rotate(-360deg);
+}
+.hotel-card.monte-carlo {
+	background-color: #3A475A;
+}
+.hotel-card-pic {
+	overflow: hidden;
+	height: 170px;
+}
+.hotel-card-content {
+	display: flex;
+	padding: 10px 15px;
+}
+.hotel-card-text {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	padding-top: 8px;
+}
+.hotel-card-rating {
+	width: 40%;
+}
+.rating-table {
+	border-collapse: collapse;
+}
+.rating-table img {
+	display: block;
+	margin: 5px auto 0;
+}
+.rating-table td:first-of-type {
+	height: 25px;
+	width: 35px;
+}
+.rating-table td:last-of-type {
+	vertical-align: bottom;
+	font-size: 16px;
+}
+.rating-table td:last-of-type small {
+	font-size: 10px;
+}
+.hotel-star {
+	position: absolute;
+	height: 10px;
+	top: -3px;
+	display: flex;
+}
+.hotel-star img {
+	flex-shrink: 0;
+}
+.hotel-card.monte-carlo .hotel-star {
+	visibility: hidden;
+}
+.hotel-novostar {
+	font-size: 14px;
+}
+.hotel-name {
+	font-size: 13px;
+	font-family: OpenSansExtraBold, sans-serif;
+	font-weight: bold;
+}
+.hotel-spec {
+	font-size: 10px;
+}
+.hotel-card.monte-carlo .hotel-spec {
+	color: #D3A349;
+}
+.hotel-place {
+	font-size: 12px;
+	margin-top: auto;
+}
+
+.hotels-slider {
+	width: 820px;
+}
+.hotels-slider .slick-list {
+	overflow: visible;
+}
+.hotels-slider .slick-prev,
+.hotels-slider .slick-next {
+	bottom: -40px;
+	top: auto;
+}
+.hotels-slider .slick-prev {
+	left: 36%;
+}
+.hotels-slider .slick-next {
+	right: 35%;
+}
+.hotels-slider .slick-next:before {
+    content: url('../img/arrow-right.png');
+    opacity: 1;
+}
+.hotels-slider .slick-prev:before {
+	content: url('../img/arrow-left.png');
+	opacity: 1;
+}
+.hotel-item {
+	/*padding: 10px 10px 30px;*/
+}
+.hotels-slider .slick-dots {
+	width: 120px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: -35px;
+}
+.hotels-slider .slick-dots li {
+	width: 5px;
+	height: 20px;
+}
+.hotels-slider .slick-dots li button {
+	width: 5px;
+	height: 20px;
+	padding: 0;
+}
+.hotels-slider .slick-dots li button:before {
+	font-size: 20px;
+	color: #fff;
 }

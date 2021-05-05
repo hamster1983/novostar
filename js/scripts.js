@@ -9,11 +9,11 @@ $(document).ready(function(){
       $('.navbar-nav').removeClass('active');
     })
 
-    /*$('.akc-slider').slick({
-        infinite: true,
-        autoplay: true,
+    $('.hotels-slider').slick({
+        infinite: false,
+        autoplay: false,
         autoplaySpeed: 2000,
-        arrows: false,
+        arrows: true,
         dots: true,
         speed: 1500,
         slidesToShow: 3,
@@ -32,6 +32,6 @@ $(document).ready(function(){
             }
           }
         ] 
-    });*/
+    });
 	
 });
