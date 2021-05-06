@@ -4,9 +4,11 @@ $(document).ready(function(){
 
     $('.navbar-toggler').click(function(){
       $('.navbar-nav').addClass('active');
+      $('body').css('overflow','hidden');
     })
     $('.close-btn').click(function(){
       $('.navbar-nav').removeClass('active');
+      $('body').css('overflow','auto');
     })
 
     $('.hotels-slider').slick({
@@ -20,18 +22,14 @@ $(document).ready(function(){
         slidesToScroll: 1,
         responsive: [
           {
-            breakpoint: 1199,
+            breakpoint: 768,
             settings: {
               slidesToShow: 2,
-            }
-          },
-          {
-            breakpoint: 820,
-            settings: {
-              slidesToShow: 1,
             }
           }
         ] 
     });
+
+    //console.log($('.main-btn-group a').outerHeight())
 	
 });
