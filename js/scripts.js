@@ -22,7 +22,7 @@ $(document).ready(function(){
         slidesToScroll: 1,
         responsive: [
           {
-            breakpoint: 768,
+            breakpoint: 769,
             settings: {
               slidesToShow: 2,
             }
@@ -30,6 +30,6 @@ $(document).ready(function(){
         ] 
     });
 
-    //console.log($('.main-btn-group a').outerHeight())
+    //console.log($('.why-novostar-blockquote').outerHeight())
 	
 });
