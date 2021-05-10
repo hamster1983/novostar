@@ -303,7 +303,7 @@ nav a {
 @media (max-width: 400px) {
 	header {
 		justify-content: space-between;
-		padding: 20px 25px 5px;
+		/*padding: 20px 25px 5px;*/
 	}
 }
 
@@ -313,7 +313,6 @@ main {
 	overflow: hidden;
 	color: #fff;
 	position: relative;
-	border: 1px solid red;
 }
 main:before {
 	position: absolute;
@@ -526,7 +525,7 @@ h1 {
 	opacity: 1;
 }
 .hotels-slider .slick-dots {
-	width: 120px;
+	width: 160px;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -545,10 +544,8 @@ h1 {
 	font-size: 20px;
 	color: #fff;
 }
-
 .main-bottom {
 	width: 100%;
-	border: 1px solid green;
 }
 .preim {
 	background: rgba(0, 0, 0, 0.2);
@@ -627,7 +624,7 @@ h1 {
 		right: 40%;
 	}
 	.hotels-slider .slick-dots {
-		left: 37%;
+		left: 35%;
 		right: auto;
 		margin: 0;
 	}
@@ -653,7 +650,7 @@ h1 {
 		right: 65%;
 	}
 	.hotels-slider .slick-dots {
-		left: 12%;
+		left: 10%;
 	}
 }
 @media (max-width: 768px) {
@@ -817,7 +814,6 @@ h1 {
 .why-novostar-left {
 	padding: 0 10px;
 	width: 50%;
-	border: 1px solid red;
 }
 .why-novostar-left h2 {
 	font-size: 24px;
@@ -831,7 +827,6 @@ h1 {
 }
 .why-novostar-right {
 	width: 50%;
-	border: 1px solid maroon;
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-start;
@@ -857,6 +852,82 @@ h1 {
 	font-weight: normal;
 	font-style: italic;
 }
+.photos {
+	border-radius: 21px;
+	overflow: hidden;
+	display: flex;
+	justify-content: space-between;
+}
+.big-photo {
+	width: 670px;
+	height: 380px;
+	position: relative;
+}
+.small-photos-wrap {
+	width: 540px;
+	height: 380px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+}
+.big-photo img,
+.small-photo img {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: .3s;
+}
+.small-photo {
+	width: 260px;
+	height: 175px;
+	position: relative;
+}
+.photo-wrap [type="radio"] {
+	display: none;
+}
+.photo-labels {
+	white-space: nowrap;
+	overflow: auto;
+}
+.photo-labels label {
+	border: 1px solid #14BDE1;
+	border-radius: 7px;
+	font-size: 14px;
+	cursor: pointer;
+	padding: 5px 15px;
+	display: inline-block;
+	margin: 20px 5px;
+}
+#all:checked ~ .photos img.all,
+#anim:checked ~ .photos img.anim,
+#event:checked ~ .photos img.event,
+#food:checked ~ .photos img.food,
+#see:checked ~ .photos img.see {
+	opacity: 1;
+}
+#all:checked ~ .photo-labels [for="all"],
+#anim:checked ~ .photo-labels [for="anim"],
+#event:checked ~ .photo-labels [for="event"],
+#food:checked ~ .photo-labels [for="food"],
+#see:checked ~ .photo-labels [for="see"] {
+	background-color: #14BDE1;
+	color: #fff;
+}
+@media (max-width: 1300px) {
+	.big-photo {
+		width: 54%;
+	}
+	.small-photos-wrap {
+		width: 44.5%;
+	}
+	.small-photo {
+		width: 48%;
+	}
+}
 @media (max-width: 1279px) {
 	.container.gallery {
 		margin: 0 30px;
@@ -875,6 +946,19 @@ h1 {
 	.blockquote-text {
 		max-width: 215px;
 	}
+	.photos {
+		border-radius: 0;
+	}
+	.big-photo {
+		height: 250px;
+	}
+	.small-photos-wrap {
+		height: 250px;
+	}
+	.small-photo {
+		width: 49%;
+		height: 115px;
+	}
 }
 @media (max-width: 900px) {
 	.container.gallery {
@@ -886,6 +970,26 @@ h1 {
 	}
 	.why-novostar-left {
 		padding-left: 0;
+	}
+}
+@media (max-width: 768px) {
+	.photos {
+		flex-wrap: wrap;
+	}
+	.big-photo {
+		width: 100%;
+		height: auto;
+		padding-top: 50%;
+		margin-bottom: 20px;
+	}
+	.small-photos-wrap {
+		width: 100%;
+		height: auto;
+	}
+	.small-photo {
+		height: auto;
+		padding-top: 25%;
+		margin-bottom: 15px;
 	}
 }
 @media (max-width: 700px) {
@@ -917,51 +1021,47 @@ h1 {
 		justify-content: space-around;
 	}
 	.blockquote-pic img {
-		padding: 30px;
+		padding-left: 20px;
+	}
+	.blockquote-text,
+	.blockquote-text span {
+		font-size: 12px;
+		line-height: 16px;
 	}
 }
 
-.photos {
-	border-radius: 21px;
-	overflow: hidden;
+.banners {
+	padding: 40px 0 45px;
 	display: flex;
 	justify-content: space-between;
 }
-.big-photo {
-	width: 670px;
-	height: 380px;
-	border: 1px solid red;
+.banners a:first-child {
 	position: relative;
+	left: -10px;
 }
-.small-photos-wrap {
-	width: 540px;
-	height: 380px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: space-between;
-	border: 1px solid black;
-}
-.big-photo img,
-.small-photo img {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	opacity: 0;
-	transition: .3s;
-}
-.small-photo {
-	width: 260px;
-	height: 175px;
-	border: 1px solid pink;
+.banners a:last-child {
 	position: relative;
+	right: -10px;
 }
-
-#all:checked ~ .photos img.all,
-#anim:checked ~ .photos img.anim,
-#event:checked ~ .photos img.event,
-#food:checked ~ .photos img.food,
-#see:checked ~ .photos img.see {
-	opacity: 1;
+@media (max-width: 1300px) {
+	.banners a:first-child,
+	.banners a:last-child {
+		position: static;
+	}
+}
+@media (max-width: 1250px) {
+	.banners {
+		overflow: auto;
+	}
+}
+@media (max-width: 480px) {
+	.banners {
+		flex-wrap: wrap;
+		padding-top: 0;
+	}
+	.banners a,
+	.banners img {
+		width: 100%;
+		position: static !important;
+	}
 }

@@ -12,9 +12,9 @@ $(document).ready(function(){
     })
 
     $('.hotels-slider').slick({
-        infinite: false,
-        autoplay: false,
-        autoplaySpeed: 2000,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
         arrows: true,
         dots: true,
         speed: 1500,
