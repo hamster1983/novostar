@@ -1224,3 +1224,203 @@ h1 {
 		width: 180px;
 	}
 }
+
+.container.news {
+	border: 2px solid #F0F6FE;
+	border-radius: 7px;
+	padding: 25px 30px;
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.news-title-block h2 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+	margin: 0;
+}
+.news-title-block p {
+	font-size: 13px;
+	line-height: 21px;
+	margin-top: 0;
+}
+.news [type="radio"] {
+	display: none;
+}
+.news-labels {
+	white-space: nowrap;
+	overflow: auto;
+}
+.news-labels label {
+	border: 1px solid #14BDE1;
+	border-radius: 7px;
+	font-size: 14px;
+	cursor: pointer;
+	padding: 5px 15px;
+	display: inline-block;
+	margin: 0 15px;
+}
+.news-labels label:last-child {
+	margin-right: 0;
+}
+#news-all:checked ~ .news-labels [for="news-all"],
+#stati:checked ~ .news-labels [for="stati"],
+#novosti:checked ~ .news-labels [for="novosti"],
+#intervu:checked ~ .news-labels [for="intervu"],
+#real-story:checked ~ .news-labels [for="real-story"],
+#news-otzyvy:checked ~ .news-labels [for="news-otzyvy"] {
+	background-color: #14BDE1;
+	color: #fff;
+}
+.news-wrap {
+	width: 100%;
+	padding: 25px 0;
+	border-top: 2px solid #F0F6FE;
+	display: flex;
+	justify-content: space-between;
+}
+.big-news {
+	width: 360px;
+	height: 480px;
+	color: #fff;
+	padding: 345px 35px 0;
+	background-image: url('../img/photo/food/1.jpg');
+	background-size: cover;
+}
+.big-news-author,
+.big-news-date {
+	font-size: 12px;
+	display: inline-flex;
+	align-items: center;
+}
+.big-news-author {
+	margin-right: 25px;
+}
+.big-news-title {
+	font-size: 24px;
+	font-weight: 700;
+	padding-top: 15px;
+	margin: 0;
+}
+.small-news {
+	width: 430px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid red;
+	margin-bottom: 30px;
+}
+.small-news-pic {
+	width: 135px;
+	height: 95px;
+	background-size: cover;
+}
+.small-news:nth-of-type(1) .small-news-pic {
+	background-image: url('../img/photo/anim/1.jpg');
+}
+.small-news:nth-of-type(2) .small-news-pic {
+	background-image: url('../img/photo/anim/2.jpg');
+}
+.small-news:nth-of-type(3) .small-news-pic {
+	background-image: url('../img/photo/anim/3.jpg');
+}
+.small-news:nth-of-type(4) .small-news-pic {
+	background-image: url('../img/photo/anim/4.jpg');
+}
+.small-news-info {
+	width: 270px;
+	border: 1px solid green;
+}
+.small-news-date,
+.pop-news-date {
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+}
+.small-news-title,
+.pop-news-title {
+	font-size: 14px;
+	font-weight: 700;
+	margin: 5px 0 0;
+}
+.popular-news {
+	width: 365px;
+}
+.pop-news-wrap {
+	background-color: #F0F6FE;
+	width: 365px;
+	height: 480px;
+	border-radius: 7px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 25px;
+}
+.popular-news h3 {
+	width: 100%;
+	font-size: 18px;
+	font-weight: 700;
+	margin: 0 0 20px;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #B8BEC7;
+}
+.pop-news {
+	width: 145px;
+	padding-bottom: 20px;
+	border: 1px solid maroon;
+}
+.pop-news-pic {
+	width: 100%;
+	height: 95px;
+	background-size: cover;
+	margin-bottom: 5px;
+}
+.pop-news:nth-of-type(1) .pop-news-pic {
+	background-image: url('../img/photo/food/1.jpg');
+}
+.pop-news:nth-of-type(2) .pop-news-pic {
+	background-image: url('../img/photo/food/2.jpg');
+}
+.pop-news:nth-of-type(3) .pop-news-pic {
+	background-image: url('../img/photo/food/3.jpg');
+}
+.pop-news:nth-of-type(4) .pop-news-pic {
+	background-image: url('../img/photo/food/4.jpg');
+}
+.novostar-life-link {
+	display: block;
+	width: 245px;
+	background-color: #14BDE1;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 7px;
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 0;
+	transition: .2s;
+	margin: 30px auto 0;
+}
+.novostar-life-link:hover {
+	box-shadow: none;
+}
+.news-pagination {
+	width: 390px;
+	border: 1px solid maroon;
+	margin: 40px auto 0;
+	display: flex;
+	justify-content: space-between;
+}
+.news-pagination button {
+	background: none;
+	border: 2px solid #F0F6FE;
+	border-radius: 3px;
+	color: inherit;
+	font-size: 14px;
+	cursor: pointer;
+}
+.news-pagination button:nth-child(2) {
+	border-color: #14BDE1;
+}
