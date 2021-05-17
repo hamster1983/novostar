@@ -1119,6 +1119,32 @@ h1 {
 .small-video {
 	position: relative;
 }
+.big-video:before,
+.small-video:before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 3;
+	cursor: pointer;
+	transition: .3s;
+}
+.big-video:before {
+	content: url('../img/yt-btn-big.png');
+	width: 137px;
+	height: 97px;
+}
+.small-video:before {
+	content: url('../img/yt-btn-small.png');
+	width: 81px;
+	height: 57px;
+}
+.big-video:hover:before,
+.small-video:hover:before {
+	opacity: .7;
+}
 .videos iframe {
 	position: absolute;
 	left: 0;
@@ -1127,6 +1153,17 @@ h1 {
 	height: 100%;
 	opacity: 0;
 	transition: .3s;
+}
+.videos img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: .3s;
+	object-fit: cover;
+	cursor: pointer;
 }
 .video-labels {
 	white-space: nowrap;
@@ -1142,11 +1179,19 @@ h1 {
 	margin: 20px 10px;
 	color: #fff;
 }
-#video-all:checked ~ .videos iframe.video-all,
+/*#video-all:checked ~ .videos iframe.video-all,
 #obzor:checked ~ .videos iframe.obzor,
 #shoping:checked ~ .videos iframe.shoping,
 #slovarik:checked ~ .videos iframe.slovarik,
 #about-tunis:checked ~ .videos iframe.about-tunis {
+	opacity: 1;
+	z-index: 2;
+}*/
+#video-all:checked ~ .videos img.video-all,
+#obzor:checked ~ .videos img.obzor,
+#shoping:checked ~ .videos img.shoping,
+#slovarik:checked ~ .videos img.slovarik,
+#about-tunis:checked ~ .videos img.about-tunis {
 	opacity: 1;
 	z-index: 2;
 }
@@ -1207,6 +1252,45 @@ h1 {
 }
 .more-video-btn:hover {
 	box-shadow: none;
+}
+.video-popup {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	z-index:-1;
+	background-color: rgba(0,0,0,.7);
+}
+.video-popup.visible {
+	opacity: 1;
+	z-index: 9999;
+}
+.iframe-wrap {
+	background-color: #fff;
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	padding-top: 50vh;
+}
+.video-popup iframe {
+	display: block;
+	position: absolute;
+	width: auto;
+	height: auto;
+	left: 5%;
+	top: 5%;
+	width: 90%;
+	height: 90%;
+}
+.close-video-popup {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 1;
+	cursor: pointer;
 }
 @media (max-width: 1279px) {
 	.video-wrap {

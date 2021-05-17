@@ -31,5 +31,16 @@ $(document).ready(function(){
     });
 
     //console.log($('.why-novostar-blockquote').outerHeight())
+
+    $('.big-video, .small-video').click(function(){
+      let link = $(this).children('img').attr('data-link');
+      $('.video-popup').addClass('visible');
+      $('.video-popup iframe').attr('src','https://www.youtube.com/embed/'+link+'?autoplay=1');
+    })
+
+    $('.close-video-popup').click(function(){
+      $('.video-popup').removeClass('visible');
+      $('.video-popup iframe').attr('src','');
+    })
 	
 });
