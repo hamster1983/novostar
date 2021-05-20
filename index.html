@@ -19,6 +19,23 @@
 </head>
 <body>
 
+	<div class="gallery-popup-wrap">
+		<div class="gallery-popup">
+			<img src="img/close-blue-btn.png" alt="" class="close-gallery-popup">
+
+			<input type="radio" name="gallery-btn" id="gal-all" data-title="Всё" data-count="5" data-gallery="allGallery" checked>
+			<input type="radio" name="gallery-btn" id="gal-anim" data-title="Анимация" data-count="14" data-gallery="animGallery">
+			<input type="radio" name="gallery-btn" id="gal-event" data-title="Для детей" data-count="8" data-gallery="eventGallery">
+			<input type="radio" name="gallery-btn" id="gal-food" data-title="Еда" data-count="10" data-gallery="foodGallery">
+			<input type="radio" name="gallery-btn" id="gal-see" data-title="Экскурсии" data-count="6" data-gallery="seeGallery">
+
+			<h3 class="gallery-title">Фотографии от Novostar Hotels <span class="gal-title-info"><span class="gal-title"></span> <span class="gal-current-slide">1</span>/<span class="gal-all-slides"></span></span></h3>
+
+			<div class="gallery-labels"><!-- see scripts.js --></div>
+			<div class="gallery-slider"><!-- see scripts.js --></div>
+		</div>
+	</div>
+
 	<div class="video-popup">
 		<div class="iframe-wrap">
 			<img src="img/close-blue-btn.png" alt="" class="close-video-popup">
@@ -32,11 +49,11 @@
 		<header class="container">
 			<a href="/"><img src="img/logo.png" alt="" class="top-logo"></a>
 			<nav class="navbar">
-				<input type="image" src="img/burger.png" role="button" class="navbar-toggler">
+				<input type="image" src="img/burger.png" alt="" class="navbar-toggler">
 				<div class="navbar-nav">
 					<div class="mob-logo">
 						<img src="img/logo-mobile.png" alt="">
-						<input type="image" src="img/close.png" role="button" class="close-btn">
+						<input type="image" src="img/close.png" alt="" class="close-btn">
 					</div>
 					<div class="mob-menu-title">Меню</div>
 					<ul class="nav-links">
@@ -52,8 +69,8 @@
 						<option value="en">En</option>
 					</select>
 					<ul class="soc-icons">
-						<li><a href="" class="mob-ru">Ru</li>
-						<li><a href="" class="mob-en">En</li>
+						<li><a href="#" class="mob-ru">Ru</a></li>
+						<li><a href="#" class="mob-en">En</a></li>
 						<li><a href="#" class="soc-icon yt" target="_blank"></a></li>
 						<li><a href="#" class="soc-icon vk" target="_blank"></a></li>
 						<li><a href="#" class="soc-icon inst" target="_blank"></a></li>
@@ -572,40 +589,42 @@
 
 				<div class="photos">
 					<div class="big-photo">
-						<img src="img/photo/all/1.jpg" alt="" class="all">
-						<img src="img/photo/anim/1.jpg" alt="" class="anim">
-						<img src="img/photo/event/1.jpg" alt="" class="event">
-						<img src="img/photo/food/1.jpg" alt="" class="food">
-						<img src="img/photo/see/1.jpg" alt="" class="see">
+						<img src="#" alt="" class="all" data-src="img/photo/all/1.jpg">
+						<img src="#" alt="" class="anim" data-src="img/photo/anim/1.jpg">
+						<img src="#" alt="" class="event" data-src="img/photo/event/1.jpg">
+						<img src="#" alt="" class="food" data-src="img/photo/food/1.jpg">
+						<img src="#" alt="" class="see" data-src="img/photo/see/1.jpg">
+
+						<button class="see-all-photo-btn">Посмотреть все фото</button>
 					</div>
 					<div class="small-photos-wrap">
 						<div class="small-photo">
-							<img src="img/photo/all/2.jpg" alt="" class="all">
-							<img src="img/photo/anim/2.jpg" alt="" class="anim">
-							<img src="img/photo/event/2.jpg" alt="" class="event">
-							<img src="img/photo/food/2.jpg" alt="" class="food">
-							<img src="img/photo/see/2.jpg" alt="" class="see">
+							<img src="#" alt="" class="all" data-src="img/photo/all/2.jpg">
+							<img src="#" alt="" class="anim" data-src="img/photo/anim/2.jpg">
+							<img src="#" alt="" class="event" data-src="img/photo/event/2.jpg">
+							<img src="#" alt="" class="food" data-src="img/photo/food/2.jpg">
+							<img src="#" alt="" class="see" data-src="img/photo/see/2.jpg">
 						</div>
 						<div class="small-photo">
-							<img src="img/photo/all/3.jpg" alt="" class="all">
-							<img src="img/photo/anim/3.jpg" alt="" class="anim">
-							<img src="img/photo/event/3.jpg" alt="" class="event">
-							<img src="img/photo/food/3.jpg" alt="" class="food">
-							<img src="img/photo/see/3.jpg" alt="" class="see">
+							<img src="#" alt="" class="all" data-src="img/photo/all/3.jpg">
+							<img src="#" alt="" class="anim" data-src="img/photo/anim/3.jpg">
+							<img src="#" alt="" class="event" data-src="img/photo/event/3.jpg">
+							<img src="#" alt="" class="food" data-src="img/photo/food/3.jpg">
+							<img src="#" alt="" class="see" data-src="img/photo/see/3.jpg">
 						</div>
 						<div class="small-photo">
-							<img src="img/photo/all/4.jpg" alt="" class="all">
-							<img src="img/photo/anim/4.jpg" alt="" class="anim">
-							<img src="img/photo/event/4.jpg" alt="" class="event">
-							<img src="img/photo/food/4.jpg" alt="" class="food">
-							<img src="img/photo/see/4.jpg" alt="" class="see">
+							<img src="#" alt="" class="all" data-src="img/photo/all/4.jpg">
+							<img src="#" alt="" class="anim" data-src="img/photo/anim/4.jpg">
+							<img src="#" alt="" class="event" data-src="img/photo/event/4.jpg">
+							<img src="#" alt="" class="food" data-src="img/photo/food/4.jpg">
+							<img src="#" alt="" class="see" data-src="img/photo/see/4.jpg">
 						</div>
 						<div class="small-photo">
-							<img src="img/photo/all/5.jpg" alt="" class="all">
-							<img src="img/photo/anim/5.jpg" alt="" class="anim">
-							<img src="img/photo/event/5.jpg" alt="" class="event">
-							<img src="img/photo/food/5.jpg" alt="" class="food">
-							<img src="img/photo/see/5.jpg" alt="" class="see">
+							<img src="#" alt="" class="all" data-src="img/photo/all/5.jpg">
+							<img src="#" alt="" class="anim" data-src="img/photo/anim/5.jpg">
+							<img src="#" alt="" class="event" data-src="img/photo/event/5.jpg">
+							<img src="#" alt="" class="food" data-src="img/photo/food/5.jpg">
+							<img src="#" alt="" class="see" data-src="img/photo/see/5.jpg">
 						</div>
 					</div>
 				</div>
