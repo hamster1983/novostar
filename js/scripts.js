@@ -177,7 +177,12 @@ $(document).ready(function(){
 
 
     $('.big-video, .small-video').on('click', function(){
-      let link = $(this).children('img').attr('data-link');
+      let link = '';
+      $(this).children('img').each(function(){
+        if($(this).css('z-index') == 2) {
+          link = $(this).attr('data-link');
+        }
+      });
       $('.video-popup').addClass('visible');
       $('.video-popup iframe').attr('src','https://www.youtube.com/embed/'+link+'?autoplay=1');
     });

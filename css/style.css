@@ -24,11 +24,15 @@ body {
 	margin: 0 auto;
 }
 header {
+	position: relative;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+header .container {
 	padding: 20px 0 5px 25px;
 	display: flex;
 	align-items: center;
 }
-nav a {
+.navbar a {
 	font-size: 14px;
 	line-height: 21px;
 	color: #444343;
@@ -129,7 +133,7 @@ nav a {
 	box-shadow: none;
 }
 @media (max-width: 1279px) {
-	header {
+	header .container {
 		justify-content: space-between;
 		padding: 20px 45px 5px 25px;
 		position: relative;
@@ -301,7 +305,7 @@ nav a {
 	}
 }
 @media (max-width: 400px) {
-	header {
+	header .container {
 		justify-content: space-between;
 		padding: 20px 30px 5px;
 	}
@@ -1563,6 +1567,9 @@ h1 {
 		padding-top: 27%;
 		margin-bottom: 20px;
 	}
+	.iframe-wrap {
+		padding-top: 45vh;
+	}
 }
 @media (max-width: 600px) {
 	.video-like-text,
@@ -2244,4 +2251,77 @@ footer .copy {
 	.foot-podpiska-form {
 		width: 100%;
 	}
+}
+
+
+/* hotel page */
+
+.hotel-page {
+	background-color: #f0f6fe;
+	min-height: 100vh;
+}
+.breadcrumbs {
+	padding: 20px 0;
+	font-size: 14px;
+}
+.hotel-content-wrap {
+	display: flex;
+	justify-content: space-between;
+}
+.hotel-content {
+	width: 960px;
+}
+.hotel-nav {
+	background: #FFFFFF;
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	padding: 20px 25px;
+	overflow: auto;
+	max-width: 100%;
+	display: flex;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
+}
+.hotel-nav a {
+	border: 2px solid #14BDE1;
+	border-radius: 7px;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 5px 12px;
+	color: #444343;
+	margin: 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .2s;
+}
+.hotel-nav a:hover {
+	color: white;
+	background-color: #14BDE1;
+}
+.hotel-nav a:first-child {
+	margin-left: 0;
+}
+.hotel-nav-booking {
+	border: none;
+	width: 137px;
+	height: 38px;
+	color: white;
+	font-size: 14px;
+	font-weight: 700;
+	background-color: #14BDE1;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 30px #FFFFFF;
+	border-radius: 7px;
+	cursor: pointer;
+	transition: .2s;
+	margin-left: 10px;
+}
+.hotel-nav-booking:hover {
+	box-shadow: none;
+}
+
+
+.hotel-aside {
+	width: 300px;
 }
