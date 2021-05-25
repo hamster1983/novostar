@@ -4,12 +4,28 @@ $(document).ready(function(){
 
     $('.navbar-toggler').click(function(){
       $('.navbar-nav').addClass('active');
-      $('body').css('overflow','hidden');
+      //$('body').css('overflow','hidden');
     })
     $('.close-btn').click(function(){
       $('.navbar-nav').removeClass('active');
-      $('body').css('overflow','auto');
+      //$('body').css('overflow','auto');
     })
+
+    if ($(window).width() < '1280') {
+      $('.dropdown-item .nav-link').on('click',function(e) {
+        e.preventDefault();
+        $(this).next('.dropdown-menu').toggleClass('display');
+      })
+    }
+
+    $(window).on('resize orientationchange', function() {
+      if ($(window).width() < '1280') {
+        $('.dropdown-item .nav-link').on('click',function(e) {
+          e.preventDefault();
+          $(this).next('.dropdown-menu').toggleClass('display');
+        })
+      }
+    });
 
     $('.hotels-slider').slick({
         infinite: true,
