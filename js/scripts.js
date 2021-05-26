@@ -191,8 +191,8 @@ $(document).ready(function(){
     });
 
 
-
-    $('.big-video, .small-video').on('click', function(){
+    //открытие видео в popup
+    $('.big-video, .small-video, .hotel-description-video').on('click', function(){
       let link = '';
       $(this).children('img').each(function(){
         if($(this).css('z-index') == 2) {
@@ -206,6 +206,29 @@ $(document).ready(function(){
     $('.close-video-popup').on('click', function(){
       $('.video-popup').removeClass('visible');
       $('.video-popup iframe').attr('src','');
+    });
+
+
+    /* меню в разделе ОТЕЛЬ */
+    function hotelNavChange() {
+      let hotelNavOffset = $('.hotel-nav').offset().top;
+      let width = $('.hotel-content').outerWidth();
+      let height = $('.hotel-nav').outerHeight();
+      $(window).scroll(function(){
+        if($(window).scrollTop()>=hotelNavOffset) {
+          $('.hotel-nav').css({'position':'fixed', 'width':width});
+          $('body').css('padding-top',height);
+        }
+        else {
+          $('.hotel-nav').css({'position':'static', 'width':'auto'});
+          $('body').css('padding-top',0);
+        }
+      });
+    }
+    hotelNavChange();
+
+    $(window).on('resize orientationchange', function(){
+      hotelNavChange();
     });
 	
 });
