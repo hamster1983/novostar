@@ -192,7 +192,7 @@ $(document).ready(function(){
 
 
     //открытие видео в popup
-    $('.big-video, .small-video, .hotel-description-video').on('click', function(){
+    $('.big-video, .small-video').on('click', function(){
       let link = '';
       $(this).children('img').each(function(){
         if($(this).css('z-index') == 2) {
@@ -208,6 +208,12 @@ $(document).ready(function(){
       $('.video-popup iframe').attr('src','');
     });
 
+    //видео на странице отеля
+    $('.hotel-yt').on('click', function(){
+      let link = $(this).children('img').attr('data-link');
+      $('.video-popup').addClass('visible');
+      $('.video-popup iframe').attr('src','https://www.youtube.com/embed/'+link+'?autoplay=1');
+    });
 
     /* меню в разделе ОТЕЛЬ */
     function hotelNavChange() {

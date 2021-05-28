@@ -2740,7 +2740,6 @@ footer .copy {
 	transition: .3s;
 	object-fit: cover;
 	cursor: pointer;
-	z-index: 2;
 }
 .hotel-description-video:before {
 	position: absolute;
@@ -2795,7 +2794,7 @@ footer .copy {
 	.hotel-description-video {
 		border-radius: 0 0 0 14px;
 		width: 100%;
-		padding-top: 50%;
+		padding-top: 60%;
 		margin-top: 15px;
 	}
 }
@@ -3162,13 +3161,388 @@ footer .copy {
 	}
 }
 
-/*.hotel-uslugi-text {
-	overflow: hidden;
-	max-height: 0;
+.hotel-children {
+	margin-top: 45px;
+	padding-bottom: 40px;
 }
-.hotel-uslugi-item input:checked ~ .hotel-uslugi-text {
-	min-height: 500px;
-}*/
+.hotel-children h3 {
+	padding: 0 0 10px 50px;
+}
+.hotel-children h3:before {
+	content: url('../img/hotel/deti.png');
+	position: absolute;
+	left: 0;
+	top: 5px;
+}
+.hotel-children-wrap {
+	column-count: 2;
+}
+.hotel-children ul {
+	font-size: 14px;
+	line-height: 21px;
+	padding: 0 20px 0 55px;
+	margin: 0;
+}
+.hotel-children ul a {
+	color: #000;
+	display: none;
+}
+.hotel-children-video {
+	position: relative;
+	flex-shrink: 0;
+	height: 255px;
+	border-radius: 14px;
+	overflow: hidden;
+	margin: 15px 20px 0 40px;
+}
+.hotel-children-video img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: .3s;
+	object-fit: cover;
+	cursor: pointer;
+}
+.hotel-children-video:before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 3;
+	cursor: pointer;
+	transition: .3s;
+	content: url('../img/yt-btn-small.png');
+	width: 81px;
+	height: 57px;
+}
+.hotel-children-video:hover:before {
+	opacity: .7;
+}
+@media (max-width: 950px) {
+	.hotel-children-video {
+		height: 220px;
+	}
+}
+@media (max-width: 850px) {
+	.hotel-children ul {
+		padding: 0 0 0 30px;
+	}
+	.hotel-children-video {
+		margin: 15px 0 0 40px;
+	}
+}
+@media (max-width: 750px) {
+	.hotel-children-wrap {
+		column-count: 1;
+	}
+	.hotel-children ul {
+		padding: 0 0 0 30px;
+	}
+	.hotel-children ul a {
+		display: inline;
+	}
+	.hotel-children .mobile-more-link ~ li {
+		display: none;
+	}
+	.hotel-children-video {
+		margin: 15px 0 0;
+		height: auto;
+		padding-top: 60%;
+		border-radius: 0 0 14px 14px;
+	}
+}
+
+.hotel-animation {
+	margin-top: 45px;
+	display: flex;
+}
+.hotel-animation-text-wrap {
+	width: 53%;
+}
+.hotel-animation-video-wrap {
+	width: 47%;
+}
+.hotel-animation h3 {
+	padding: 0 0 10px 50px;
+}
+.hotel-animation h3:before {
+	content: url('../img/hotel/ball.png');
+	position: absolute;
+	left: 0;
+}
+.hotel-animation ul a {
+	color: #000;
+	display: none;
+}
+.hotel-animation ul {
+	font-size: 14px;
+	line-height: 21px;
+	padding-right: 40px;
+	margin-top: 25px;
+}
+.hotel-animation ul a {
+	color: #000;
+	display: none;
+}
+.hotel-animation-video {
+	position: relative;
+	flex-shrink: 0;
+	height: 245px;
+	border-radius: 14px;
+	overflow: hidden;
+	margin: 15px 20px 30px;
+}
+.hotel-animation-video img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transition: .3s;
+	object-fit: cover;
+	cursor: pointer;
+}
+.hotel-animation-video:before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	z-index: 3;
+	cursor: pointer;
+	transition: .3s;
+	content: url('../img/yt-btn-small.png');
+	width: 81px;
+	height: 57px;
+}
+.hotel-animation-video:hover:before {
+	opacity: .7;
+}
+@media (max-width: 950px) {
+	.hotel-animation-video {
+		height: 220px;
+	}
+}
+@media (max-width: 850px) {
+	.hotel-animation ul {
+		padding-left: 30px;
+		padding-right: 15px;
+	}
+	.hotel-animation-video-wrap {
+		padding-top: 40px;
+	}
+	.hotel-animation-video {
+		margin-right: 0;
+	}
+}
+@media (max-width: 750px) {
+	.hotel-animation {
+		flex-wrap: wrap;
+	}
+	.hotel-animation-text-wrap,
+	.hotel-animation-video-wrap {
+		width: 100%;
+	}
+	.hotel-animation ul {
+		padding-right: 0;
+	}
+	.hotel-animation ul a {
+		display: inline;
+	}
+	.hotel-animation .mobile-more-link ~ li {
+		display: none;
+	}
+	.hotel-animation-video-wrap {
+		padding-top: 0;
+	}
+	.hotel-animation-video {
+		margin: 10px 0 30px;
+		height: auto;
+		padding-top: 60%;
+	}
+}
+
+.hotel-thalasso {
+	margin-top: 45px;
+	display: flex;
+	font-size: 14px;
+	line-height: 21px;
+}
+.hotel-thalasso-wrap {
+	width: 50%;
+}
+.hotel-thalasso-title,
+.hotel-curses-title {
+	padding: 0 0 10px 50px;
+}
+.hotel-thalasso-title:before {
+	content: url('../img/hotel/beauty.png');
+	position: absolute;
+	left: 0;
+	top: -5px;
+}
+.hotel-curses-title:before {
+	content: url('../img/hotel/body.png');
+	position: absolute;
+	left: 5px;
+	top: -5px;
+}
+.hotel-thalasso-text {
+	padding: 5px 60px 0 50px;
+}
+.hotel-thalasso-more-link {
+	color: #000;
+	display: none;
+}
+.hotel-thalasso ul {
+	padding-left: 70px;
+}
+.hotel-curses-detail {
+	color: #B6B3B3;
+	font-style: italic;
+	text-align: right;
+	padding: 20px 40px 20px 0;
+}
+.hotel-curses-download {
+	display: flex;
+}
+.hotel-curses-download img {
+	align-self: center;
+}
+.hotel-curses-download a  {
+	display: inline-block;
+	text-align: center;
+	padding-top: 7px;
+	text-decoration: none;
+	width: 132px;
+	height: 38px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	background-color: #14BDE1;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 30px #FFFFFF;
+	border-radius: 7px;
+	margin-left: 40px;
+	transition: .2s;
+}
+.hotel-curses-download a:hover {
+	box-shadow: none;
+}
+.hotel-curses-download,
+.hotel-curses-download-description {
+	padding-left: 50px;
+}
+@media (max-width: 850px) {
+	.hotel-thalasso-text {
+		padding: 5px 40px 0 15px;
+	}
+}
+@media (max-width: 650px) {
+	.hotel-thalasso {
+		flex-wrap: wrap;
+	}
+	.hotel-thalasso-wrap {
+		width: 100%;
+	}
+	.hotel-thalasso-more-link {
+		display: inline;
+	}
+	.hotel-thalasso-more-link + span {
+		display: none;
+	}
+	.hotel-curses-detail { 
+		padding-right: 0;
+	}
+	.hotel-curses-download {
+		justify-content: flex-end;
+	}
+	.hotel-curses-download-description {
+		text-align: right;
+		padding: 0;
+	}
+}
+@media (max-width: 500px) {
+	.hotel-thalasso-text {
+		padding-left: 0;
+	}.hotel-thalasso ul {
+		padding-left: 20px;
+	}
+	.hotel-curses-detail {
+		padding-bottom: 0;
+	}
+}
+
+.hotel-inportant-info {
+	margin-top: 45px;
+}
+.hotel-inportant-info-wrap {
+	border: 1px solid #C4C4C4;
+	box-sizing: border-box;
+	border-radius: 29px 29px 0px 0px;
+	width: 810px;
+	margin: 20px auto 0;
+	overflow: hidden;
+	font-size: 14px;
+	line-height: 21px;
+}
+.hotel-inportant-info h3 {
+	background: #F3F3F1;
+	padding: 25px 50px;
+	margin: 0;
+}
+.hotel-inportant-info-item {
+	padding: 25px 0 30px;
+	margin: 0 95px 0 85px;
+}
+.hotel-inportant-info-item:not(:last-of-type) {
+	border-bottom: 1px solid #C4C4C4;
+}
+.hotel-inportant-info-item:last-of-type {
+	padding-bottom: 0;
+}
+.hotel-inportant-info-item h4 {
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 700px;
+	position: relative;
+	margin: 0 0 10px;
+}
+.hotel-inportant-info-item h4:before {
+	position: absolute;
+	left: -35px;
+}
+.hotel-inportant-uslovia:before {
+	content: url('../img/hotel/clock.png');
+}
+.hotel-inportant-pets:before {
+	content: url('../img/hotel/pets.png');
+	left: -42px !important;
+	top: -5px;
+}
+.hotel-inportant-season:before {
+	content: url('../img/hotel/exit.png');
+}
+.hotel-inportant-change:before {
+	content: url('../img/hotel/change.png');
+}
+.hotel-inportant-nalog:before {
+	content: url('../img/hotel/nalog.png');
+}
+.hotel-inportant-info-item p {
+	margin: 0;
+}
+.hotel-inportant-info-item a {
+	color: #000;
+}
+.hotel-inportant-info-item ul {
+	margin: 0;
+	padding-left: 18px;
+}
 
 
 .hotel-aside {
