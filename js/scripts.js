@@ -223,11 +223,11 @@ $(document).ready(function(){
       $(window).scroll(function(){
         if($(window).scrollTop()>=hotelNavOffset) {
           $('.hotel-nav').css({'position':'fixed', 'width':width});
-          $('body').css('padding-top',height);
+          $('.hotel-content').css('padding-top',height);
         }
         else {
           $('.hotel-nav').css({'position':'static', 'width':'auto'});
-          $('body').css('padding-top',0);
+          $('.hotel-content').css('padding-top',0);
         }
       });
     }
@@ -235,6 +235,38 @@ $(document).ready(function(){
 
     $(window).on('resize orientationchange', function(){
       hotelNavChange();
+    });
+
+
+    //функция смены активного пункта меню отелей при скролле
+    function Scroll_block(){
+      let scroll_top = $(document).scrollTop();
+      let height = $('.hotel-nav').outerHeight();
+      $('.hotel-nav a').each(function(){
+        let hash = $(this).attr('href');
+        let target = $(hash);
+        if (target.position().top <= scroll_top+height && target.position().top + target.outerHeight() > scroll_top+height) {
+            $('.hotel-nav a').removeClass('active');
+            $(this).addClass('active');
+        } else {
+            $(this).removeClass('active');
+        }
+      });
+    }
+  
+    $(document).on('scroll', Scroll_block);
+
+    $('.hotel-nav a').on('click',function(e){
+      e.preventDefault();
+      $(document).off('scroll');
+      $('.hotel-nav a').removeClass('active');
+      $(this).addClass('active');
+      let height = $('.hotel-nav').outerHeight();
+      let elementClick = $(this).attr('href');
+      let destination = $(elementClick).offset().top;
+      $('html, body').animate({ scrollTop: destination-height }, 1000, function(){
+        $(document).on('scroll', Scroll_block);
+      });
     });
 	
 });

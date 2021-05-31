@@ -110,13 +110,13 @@
 					<div class="hotel-content">
 
 						<nav class="hotel-nav hotel-shadow-block">
-							<a href="#">Фото</a>
-							<a href="#">Описание</a>
-							<a href="#">Услуги</a>
-							<a href="#">Номера</a>
-							<a href="#">Для&nbsp;детей</a>
-							<a href="#">Анимация</a>
-							<a href="#">Талассо/SPA</a>
+							<a href="#hotel-photo">Фото</a>
+							<a href="#hotel-description">Описание</a>
+							<a href="#hotel-uslugi">Услуги</a>
+							<a href="#hotel-rooms">Номера</a>
+							<a href="#hotel-children">Для&nbsp;детей</a>
+							<a href="#hotel-animation">Анимация</a>
+							<a href="#hotel-thalasso">Талассо/SPA</a>
 							<button class="hotel-nav-booking">Забронировать</button>
 						</nav>
 
@@ -158,7 +158,7 @@
 							</div>
 						</div>
 
-						<div class="hotel-photo">
+						<div class="hotel-photo" id="hotel-photo">
 							<div class="hotel-big-photo">
 								<img src="img/photo/see/1.jpg" alt="">
 								<button class="see-all-photo-btn">Посмотреть все фото</button>
@@ -171,7 +171,7 @@
 							</div>
 						</div>
 
-						<div class="hotel-description hotel-shadow-block">
+						<div class="hotel-description hotel-shadow-block" id="hotel-description">
 							<div class="hotel-description-text">
 								<h3>Описание отеля</h3>
 								<p>Великолепный видовой отель – рай для людей, которые уделяют время своему инстаграм-профилю и его оформлению, тщательно планируют фотоконтент, а потом любовно отбирают самые эффектные кадры.</p>
@@ -233,7 +233,7 @@
 							</div>
 						</div>
 
-						<div class="hotel-uslugi hotel-shadow-block">
+						<div class="hotel-uslugi hotel-shadow-block" id="hotel-uslugi">
 							<h3>Услуги и удобства</h3>
 							<div class="hotel-uslugi-wrap">
 								<div class="hotel-uslugi-item">
@@ -422,7 +422,13 @@
 							</div>
 						</div>
 
-						<div class="hotel-children hotel-shadow-block">
+						<div class="hotel-rooms hotel-shadow-block" id="hotel-rooms">
+							<h3>Категории номеров</h3>
+							<p class="hotel-rooms-notification">Обращаем ваше внимание, что категории номеров, представленные на сайте, предназначены для ознакомительных целей и могут отличаться от фактического размещения. <br>
+							Тип и категорию забронированного вами номера следует уточнять у турагентства/туроператора.</p>
+						</div>
+
+						<div class="hotel-children hotel-shadow-block" id="hotel-children">
 							<h3>Для детей</h3>
 							<div class="hotel-children-wrap">
 								<ul>
@@ -443,7 +449,7 @@
 							</div>	
 						</div>
 
-						<div class="hotel-animation hotel-shadow-block">
+						<div class="hotel-animation hotel-shadow-block" id="hotel-animation">
 							<div class="hotel-animation-text-wrap">
 								<h3>Анимация</h3>
 								<ul>
@@ -470,7 +476,7 @@
 							</div>
 						</div>
 
-						<div class="hotel-thalasso hotel-shadow-block">
+						<div class="hotel-thalasso hotel-shadow-block" id="hotel-thalasso">
 							<div class="hotel-thalasso-wrap">
 								<h3 class="hotel-thalasso-title">Талассотерапия и SPA</h3>
 								<p class="hotel-thalasso-text">Талассо-центр Bio Azur заслуженно является одним из самых популярных центров талассотерапии в Тунисе. Сердце талассо-центра – знаменитый бассейн Акватоник с панорамным видом на море и с подогреваемой морской водой <a href="#" class="hotel-thalasso-more-link"><b>Подробнее...</b></a><span>, плавно переходящий в бассейн под открытым небом. Приятным бонусом для клиентов, проходящих курсы талассотерапии, является бесплатное посещение хаммама, бассейна Акватоник, фитнес-зала, зоны релаксации. Центр предлагает впечатляющий перечень энергетических массажей с ценными маслами. Для эстетических процедур здесь используют легендарные косметические бренды Sothys и Gatineau. В 2018 году открыт смузи-бар для гостей, которые проходят курс Детокс. Все услуги центра ($)</span></p>
@@ -502,6 +508,24 @@
 								<h3>Важная информация</h3>
 								<div class="hotel-inportant-info-item">
 									<h4 class="hotel-inportant-uslovia">Условия заселения</h4>
+									<div class="hotel-zaezd">
+										<div class="hotel-zaezd-text">
+											Заселение<br><b>После 15.00</b>
+										</div>
+										<div class="hotel-zaezd-time">
+											<div class="hotel-time-item">15:00</div>
+											<img src="img/hotel/range-after.png" alt="">
+										</div>
+									</div>
+									<div class="hotel-vyezd">
+										<div class="hotel-vyezd-text">
+											Выезд<br><b>До 12.00</b>
+										</div>
+										<div class="hotel-vyezd-time">
+											<div class="hotel-time-item">12:00</div>
+											<img src="img/hotel/range-before.png" alt="">
+										</div>
+									</div>
 								</div>
 								<div class="hotel-inportant-info-item">
 									<h4 class="hotel-inportant-pets">Размещение с животными</h4>
@@ -528,7 +552,28 @@
 						</div>
 
 					</div><!-- end .hotel-content -->
-					<aside class="hotel-aside"></aside>
+					<aside class="hotel-aside">
+						<div class="hotel-aside-wrap hotel-shadow-block">
+							<div class="hotel-aside-interes">
+								<h3>Вам также будет полезно</h3>
+								<ul>
+									<li><a href="#">Сравнить отели</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">О Тунисе</a></li>
+									<li><a href="#">Комментарий к размещению</a></li>
+									<li><a href="#">Telegram-канал для турагентов</a></li>
+								</ul>
+							</div>
+							<div class="hotel-aside-podpiska">
+								<img src="img/hotel/tun-slov.png" alt="">
+								<p>При подписке на&nbsp;нашу рассылку тунисский словарик <span>в&nbsp;подарок</span></p>
+								<form action="" class="hotel-aside-podpiska-form">
+									<input type="email" name="mail" placeholder="E-mail">
+									<button type="submit" name="submit">ПОДПИСАТЬСЯ</button>
+								</form>
+							</div>
+						</div>
+					</aside>
 				</div><!-- end .hotel-content-wrap -->
 			</div><!-- end .container -->
 		</div>
