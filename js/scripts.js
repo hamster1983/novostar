@@ -231,10 +231,13 @@ $(document).ready(function(){
         }
       });
     }
-    hotelNavChange();
-
-    $(window).on('resize orientationchange', function(){
+    if($('.hotel-nav').length) { //вызываем функцию только на странице, где есть это меню
       hotelNavChange();
+    }
+    $(window).on('resize orientationchange', function(){
+      if($('.hotel-nav').length) {
+        hotelNavChange();
+      }
     });
 
 
