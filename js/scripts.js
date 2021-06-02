@@ -271,5 +271,28 @@ $(document).ready(function(){
         $(document).on('scroll', Scroll_block);
       });
     });
+
+    //модальное окно в категории номеров
+    $('.hotel-rooms-modal').on('click',function(e){
+      e.preventDefault();
+      let content = $(this).siblings('.hotel-rooms-hidden').html();
+      let pic = $(this).siblings('.hotel-rooms-pic').find('img').attr('src');
+      $('.hotel-rooms-popup-content').html(content);
+      $('.hotel-rooms-popup-pic img').attr('src',pic);
+      $('.hotel-rooms-popup-wrap').addClass('visible');
+    });
+
+    $('.close-hotel-rooms-popup').on('click', function(){
+      $('.hotel-rooms-popup-wrap').removeClass('visible');
+    });
+
+    $('.hotel-rooms-slider').slick({
+      infinite: true,
+      arrows: true,
+      dots: true,
+      speed: 1500,
+      slidesToShow: 3,
+      slidesToScroll: 1
+    })
 	
 });
