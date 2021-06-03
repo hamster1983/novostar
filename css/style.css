@@ -13,6 +13,20 @@ body {
 	font-family: OpenSans, sans-serif;
 	color: #444343;
 }
+.preloader {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+	z-index: 9999;
+	transition: 1s;
+}
 .content-wrap {
 	overflow-x: hidden;
 	/*max-width: 1440px;
@@ -2394,9 +2408,14 @@ footer .copy {
 	align-items: center;
 	transition: .2s;
 }
-.hotel-nav a:hover,
+@media (min-width: 1280px) {
+	.hotel-nav a:hover {
+		color: #fff;
+		background-color: #14BDE1;
+	}
+}
 .hotel-nav a.active {
-	color: white;
+	color: #fff;
 	background-color: #14BDE1;
 }
 .hotel-nav a:first-child {
@@ -2809,6 +2828,63 @@ footer .copy {
 	}
 }
 
+.text-popup-wrap {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	overflow: auto;
+	opacity: 0;
+	z-index:-1;
+	background-color: rgba(0,0,0,.7);
+	transition: .3s;
+}
+.text-popup-wrap.visible {
+	opacity: 1;
+	z-index: 9999;
+}
+.text-popup {
+	width: 100%;
+	max-width: 900px;
+	background-color: #fff;
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	padding: 40px 60px;
+	position: relative;
+	margin: auto;
+	align-self: center;
+	font-size: 14px;
+	line-height: 21px;
+}
+.close-text-popup {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	z-index: 1;
+	cursor: pointer;
+}
+.text-popup-content {
+	display: none;
+}
+@media (max-width: 950px) {
+	.text-popup {
+		border-radius: 0;
+		max-width: 95%;
+	}
+	.close-text-popup {
+		top: 10px;
+		right: 10px;
+	}
+}
+@media (max-width: 500px) {
+	.text-popup {
+		padding: 25px;
+		font-size: 12px;
+		line-height: 18px;
+	}
+}
+
 .hotel-place {
 	margin-top: 45px;
 	display: flex;
@@ -2962,6 +3038,38 @@ footer .copy {
 	}
 }
 
+.image-popup-wrap {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	z-index:-1;
+	background-color: rgba(0,0,0,.7);
+	transition: .3s;
+}
+.image-popup-wrap.visible {
+	opacity: 1;
+	z-index: 9999;
+}
+.image-popup {
+	position: relative;
+}
+.image-popup img {
+	max-width: 90vw;
+	max-height: 90vh;
+}
+.close-image-popup {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	z-index: 1;
+	cursor: pointer;
+}
+
 .hotel-fackts {
 	display: flex;
 	flex-wrap: wrap;
@@ -3048,6 +3156,7 @@ footer .copy {
 .hotel-camera {
 	position: relative;
 	top: 7px;
+	cursor: pointer;
 }
 .hotel-uslugi-item input {
 	display: none;
@@ -3070,7 +3179,7 @@ footer .copy {
 [for="inet"]:before {
 	content: url('../img/hotel/inet.png');
 }
-[for="food"]:before {
+[for="eda"]:before {
 	content: url('../img/hotel/food.png');
 	top: 10px !important;
 }
@@ -3555,7 +3664,8 @@ footer .copy {
 		display: inline;
 	}
 	.hotel-children .mobile-more-link ~ li {
-		display: none;
+		position: absolute;
+		opacity: 0;
 	}
 	.hotel-children-video {
 		margin: 15px 0 0;
@@ -3664,7 +3774,8 @@ footer .copy {
 		display: inline;
 	}
 	.hotel-animation .mobile-more-link ~ li {
-		display: none;
+		position: absolute;
+		opacity: 0;
 	}
 	.hotel-animation-video-wrap {
 		padding-top: 0;
@@ -3777,8 +3888,9 @@ footer .copy {
 }
 @media (max-width: 500px) {
 	.hotel-thalasso-text {
-		padding-left: 0;
-	}.hotel-thalasso ul {
+		padding: 5px 20px 0;
+	}
+	.hotel-thalasso ul {
 		padding-left: 20px;
 	}
 	.hotel-curses-detail {

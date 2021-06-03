@@ -215,7 +215,7 @@ $(document).ready(function(){
       $('.video-popup iframe').attr('src','https://www.youtube.com/embed/'+link+'?autoplay=1');
     });
 
-    /* меню в разделе ОТЕЛЬ */
+    // меню в разделе ОТЕЛЬ
     function hotelNavChange() {
       let hotelNavOffset = $('.hotel-nav').offset().top;
       let width = $('.hotel-content').outerWidth();
@@ -272,6 +272,21 @@ $(document).ready(function(){
       });
     });
 
+    //модальное окно с текстом
+    $('.open-text-popup').on('click',function(e){
+      e.preventDefault();
+      let content = $(this).parent().siblings('.text-popup-content').html();
+      $('.text-popup-body').html(content);
+      $('.text-popup-wrap').addClass('visible');
+    });
+
+    //модальное окно со картинками
+    $('.open-image-popup').on('click',function(){
+      let link = $(this).attr('data-link');
+      $('.image-popup-pic').attr('src',link);
+      $('.image-popup-wrap').addClass('visible');
+    });
+
     //модальное окно в категории номеров
     $('.hotel-rooms-modal').on('click',function(e){
       e.preventDefault();
@@ -282,10 +297,31 @@ $(document).ready(function(){
       $('.hotel-rooms-popup-wrap').addClass('visible');
     });
 
-    $('.close-hotel-rooms-popup').on('click', function(){
-      $('.hotel-rooms-popup-wrap').removeClass('visible');
+    //закрытие модальных окон
+    $('[data-close="popup"]').on('click', function(){
+      $(this).parent().parent().removeClass('visible');
     });
 
+    //кнопка "подробнее" на мобильных устройствах
+    $('.mobile-more-link a').on('click', function(e){
+      e.preventDefault();
+      $(this).css('display','none');
+      $(this).parent().nextAll('li').css({'position':'static','opacity':1});
+    })
+    $('.hotel-thalasso-more-link').on('click', function(e){
+      e.preventDefault();
+      $(this).css('display','none');
+      $(this).next('span').css('display','inline');
+    })
+
+    //слайдер в разделе "Номера"
+    $('.hotel-rooms-slider').on('init reInit',function(e,slick){
+      if(slick.slideCount<=slick.options.slidesToShow){
+        setTimeout(function(){
+          slick.$slider.slick('slickAdd',slick.$slides.clone())
+        },10)
+      }
+    })
     $('.hotel-rooms-slider').slick({
       infinite: true,
       arrows: true,
