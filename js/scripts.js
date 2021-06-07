@@ -1,3 +1,8 @@
+$(window).on('load',function(){
+  $('.preloader').css({'opacity': 0, 'z-index': -1})
+  $('body').css('overflow','visible');
+});
+
 $(document).ready(function(){
 
     //AOS.init();
@@ -298,30 +303,42 @@ $(document).ready(function(){
     });
 
     //закрытие модальных окон
-    $('[data-close="popup"]').on('click', function(){
+    $('[data-close="popup"]').on('click',function(){
       $(this).parent().parent().removeClass('visible');
     });
+    $('[data-popup="wrap"]').on('click',function(e){
+      if(e.target == this) {
+        $(this).removeClass('visible');
+      }
+    })
 
     //кнопка "подробнее" на мобильных устройствах
-    $('.mobile-more-link a').on('click', function(e){
+    $('.mobile-more-link a').on('click',function(e){
       e.preventDefault();
       $(this).css('display','none');
       $(this).parent().nextAll('li').css({'position':'static','opacity':1});
     })
-    $('.hotel-thalasso-more-link').on('click', function(e){
+    $('.hotel-thalasso-more-link').on('click',function(e){
       e.preventDefault();
       $(this).css('display','none');
       $(this).next('span').css('display','inline');
-    })
+    });
+
+    //открытие фоток в разделе "фото отеля"
+    $('.hotel-photo img, .photos img').on('click',function(){
+      let link = $(this).attr('src');
+      $('.image-popup-pic').attr('src',link);
+      $('.image-popup-wrap').addClass('visible');
+    });
 
     //слайдер в разделе "Номера"
-    $('.hotel-rooms-slider').on('init reInit',function(e,slick){
+    /*$('.hotel-rooms-slider').on('init reInit',function(e,slick){
       if(slick.slideCount<=slick.options.slidesToShow){
         setTimeout(function(){
           slick.$slider.slick('slickAdd',slick.$slides.clone())
         },10)
       }
-    })
+    })*/
     $('.hotel-rooms-slider').slick({
       infinite: true,
       arrows: true,

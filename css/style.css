@@ -21,11 +21,19 @@ body {
 	right: 0;
 	background-color: #fff;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	opacity: 1;
 	z-index: 9999;
-	transition: 1s;
+	/*transition: 1s;*/
+}
+.preloader img {
+	animation: puls 2s linear infinite;
+}
+@keyframes puls {
+	50% { transform: scale(1.2) }
+	100% { transform: scale(1) }
 }
 .content-wrap {
 	overflow-x: hidden;
@@ -582,18 +590,20 @@ h1 {
 .hotel-novostar {
 	font-size: 14px;
 }
-.hotel-name {
+.hotel-card-text .hotel-name {
 	font-size: 13px;
+	line-height: 16px;
 	font-family: OpenSansExtraBold, sans-serif;
 	font-weight: bold;
+	margin: 0;
 }
-.hotel-spec {
+.hotel-card-text .hotel-spec {
 	font-size: 10px;
 }
-.hotel-card.monte-carlo .hotel-spec {
+.hotel-card-text .hotel-card.monte-carlo .hotel-spec {
 	color: #D3A349;
 }
-.hotel-place {
+.hotel-card-text .hotel-place {
 	font-size: 12px;
 	margin-top: auto;
 }
@@ -1012,6 +1022,7 @@ h1 {
 	object-fit: cover;
 	opacity: 0;
 	transition: .3s;
+	cursor: pointer;
 }
 .small-photo {
 	width: 260px;
@@ -2449,7 +2460,7 @@ footer .copy {
 .hotel-name {
 	font-size: 22px;
 	line-height: 29px;
-	font-weight: 700px;
+	font-weight: 700;
 	text-transform: uppercase;
 	margin-top: 5px;
 }
@@ -2644,6 +2655,7 @@ footer .copy {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	cursor: pointer;
 }
 .hotel-big-photo {
 	width: 525px;
@@ -3377,6 +3389,7 @@ footer .copy {
 	position: relative;
 	top: 2px;
 	left: 5px;
+	display: inline;
 }
 .hotel-rooms-modal {
 	color: #000;
@@ -4511,4 +4524,132 @@ footer .copy {
 	.see-another-hotel {
 		padding: 40px 15px;
 	}
+}
+
+
+/* find hotel */
+.find-hotel-content-wrap {
+	display: flex;
+	justify-content: space-between;
+}
+.find-hotel-content {
+	width: 820px;
+	border: 1px solid red;
+}
+.find-hotel-title {
+	width: 822px;
+	height: 262px;
+	overflow: hidden;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 7px;
+	background-image: url('../img/find-hotel-fon.jpg');
+	background-size: cover;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.find-hotel-title:before {
+	position: absolute;
+	content: '';
+	display: block;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.3);
+}
+.find-hotel-title h1 {
+	font-size: 36px;
+	line-height: 49px;
+	margin: 0;
+	position: relative;
+}
+.find-hotel-title span {
+	font-size: 18px;
+	line-height: 24px;
+	position: relative;
+}
+.find-hotel-subtitle {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700px;
+	padding: 25px 0;
+	border-bottom: 2px solid #F0F6FE;
+}
+[name="find-hotel-radio"] {
+	display: none;
+}
+.find-hotel-filtr {
+	display: flex;
+	justify-content: space-between;
+}
+.find-hotel-filtr label {
+	display: block;
+	font-size: 14px;
+	line-height: 21px;
+	position: relative;
+	cursor: pointer;
+	padding-left: 25px;
+	user-select: none;
+}
+.find-hotel-filtr label:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	border: 2px solid #14BDE1;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+.find-hotel-filtr label:after {
+	content: '';
+	display: block;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #C4C4C4;
+	position: absolute;
+	left: 4px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	display: none;
+}
+#super-beach:checked ~ .find-hotel-filtr label[for="super-beach"]:after,
+#vodnye-gorki:checked ~ .find-hotel-filtr label[for="vodnye-gorki"]:after,
+#budzhetno:checked ~ .find-hotel-filtr label[for="budzhetno"]:after,
+#bez-detey:checked ~ .find-hotel-filtr label[for="bez-detey"]:after,
+#thalasso-filtr:checked ~ .find-hotel-filtr label[for="thalasso-filtr"]:after {
+	display: inline;
+}
+.find-hotel-cards {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 30px;
+}
+.find-hotel-cards .hotel-item {
+	margin: 0 30px 40px 0;
+}
+#super-beach:checked ~ .find-hotel-cards .hotel-item:not(.super-beach),
+#vodnye-gorki:checked ~ .find-hotel-cards .hotel-item:not(.vodnye-gorki),
+#budzhetno:checked ~ .find-hotel-cards .hotel-item:not(.budzhetno),
+#bez-detey:checked ~ .find-hotel-cards .hotel-item:not(.bez-detey),
+#thalasso-filtr:checked ~ .find-hotel-cards .hotel-item:not(.thalasso-filtr) {
+	display: none;
+}
+
+
+.find-hotel-aside {
+	width: 425px;
+	border: 1px solid green;
+}
+.find-hotel-alise-banners img {
+	max-width: 100%;
 }
