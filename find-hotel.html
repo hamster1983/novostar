@@ -88,6 +88,7 @@
 						
 						<h3 class="find-hotel-subtitle">Выберите, что для вас в приоритете?</h3>
 
+						<input type="radio" id="find-hotel-all" name="find-hotel-radio" checked>
 						<input type="radio" id="super-beach" name="find-hotel-radio">
 						<input type="radio" id="vodnye-gorki" name="find-hotel-radio">
 						<input type="radio" id="budzhetno" name="find-hotel-radio">
@@ -95,6 +96,7 @@
 						<input type="radio" id="thalasso-filtr" name="find-hotel-radio">
 
 						<div class="find-hotel-filtr">
+							<label for="find-hotel-all">Все</label>
 							<label for="super-beach">Super пляж</label>
 							<label for="vodnye-gorki">Водные горки</label>
 							<label for="budzhetno">Бюджетно</label>
@@ -454,26 +456,53 @@
 					<aside class="find-hotel-aside">
 						<div class="find-hotel-aside-wrap hotel-shadow-block">
 
-							<div class="find-hotel-alise-banners">
+							<div class="find-hotel-aside-banners">
 								<a href="#"><img src="img/banner-2.png" alt=""></a>
 								<a href="#"><img src="img/banner-3.png" alt=""></a>
 								<a href="#"><img src="img/banner-1.png" alt=""></a>
 							</div>
 
-							<div class="find-hotel-aside-podpiska">
-								<div class="find-hotel-aside-podpiska-pic">
-									<img src="img/hotel/tun-slov.png" alt="">
+							<div class="find-hotel-aside-news">
+								<h3>Полезные статьи</h3>
+								<div class="find-hotel-aside-news-item">
+									<div class="find-hotel-aside-news-pic"></div>
+									<span class="find-hotel-aside-news-date"><img src="img/news-clock-dark.png" alt="">&nbsp;24.08.2020</span>
+									<h4 class="find-hotel-aside-news-title"><a href="#">Есть ли каши на завтрак для детей в Тунисе?</a></h4>
 								</div>
-								<div class="find-hotel-aside-podpiska-text">
-									<p>При подписке на&nbsp;нашу рассылку тунисский словарик <span>в&nbsp;подарок</span></p>
-									<form action="" class="find-hotel-aside-podpiska-form">
-										<input type="email" name="mail" placeholder="E-mail">
-										<button type="submit" name="submit">ПОДПИСАТЬСЯ</button>
-									</form>
+								<div class="find-hotel-aside-news-item">
+									<div class="find-hotel-aside-news-pic"></div>
+									<span class="find-hotel-aside-news-date"><img src="img/news-clock-dark.png" alt="">&nbsp;15.07.2020</span>
+									<h4 class="find-hotel-aside-news-title"><a href="#">Детское питание в Тунисе и других странах</a></h4>
+								</div>
+								<div class="find-hotel-aside-news-item">
+									<div class="find-hotel-aside-news-pic"></div>
+									<span class="find-hotel-aside-news-date"><img src="img/news-clock-dark.png" alt="">&nbsp;12.03.2020</span>
+									<h4 class="find-hotel-aside-news-title"><a href="#">Популярные экскурсии или «must see» в Тунисе</a></h4>
+								</div>
+								<div class="find-hotel-aside-news-item">
+									<div class="find-hotel-aside-news-pic"></div>
+									<span class="find-hotel-aside-news-date"><img src="img/news-clock-dark.png" alt="">&nbsp;16.01.2020</span>
+									<h4 class="find-hotel-aside-news-title"><a href="#">Медицинская помощь в Тунисе на отдыхе с детьми</a></h4>
+								</div>
+								<div class="find-hotel-aside-news-more-wrap">
+									<a href="#" class="find-hotel-aside-news-more">БОЛЬШЕ ИНТЕРЕСНЫХ СТАТЕЙ</a>
 								</div>
 							</div>
 
-							<div class="find-hotel-aside-interes">
+							<div class="find-hotel-aside-podpiska">
+								<div class="hotel-aside-podpiska-pic">
+									<img src="img/hotel/tun-slov.png" alt="">
+								</div>
+								<div class="hotel-aside-podpiska-text">
+									<p>При подписке на&nbsp;нашу рассылку тунисский словарик <span>в&nbsp;подарок</span></p>
+								</div>
+								<form action="" class="hotel-aside-podpiska-form">
+									<input type="email" name="mail" placeholder="E-mail">
+									<button type="submit" name="submit">ПОДПИСАТЬСЯ</button>
+								</form>
+							</div>
+
+							<div class="hotel-aside-interes find-hotel-aside-interes">
 								<h3>Вам также будет полезно</h3>
 								<ul>
 									<li><a href="#">Сравнить отели</a></li>

@@ -3943,7 +3943,7 @@ footer .copy {
 .hotel-inportant-info-item h4 {
 	font-size: 16px;
 	line-height: 21px;
-	font-weight: 700px;
+	font-weight: 700;
 	position: relative;
 	margin: 0 0 10px;
 }
@@ -4098,10 +4098,10 @@ footer .copy {
 	padding: 40px 0;
 	border-bottom: 2px solid #F0F6FE;
 }
-.hotel-aside-podpiska img {
+.hotel-aside-podpiska-pic img {
 	max-width: 100%;
 }
-.hotel-aside-podpiska p {
+.hotel-aside-podpiska-text p {
 	font-size: 16px;
 	line-height: 19px;
 	font-weight: 700;
@@ -4109,7 +4109,7 @@ footer .copy {
 	max-width: 175px;
 	margin: 15px 0 25px 15px;
 }
-.hotel-aside-podpiska p span {
+.hotel-aside-podpiska-text p span {
 	color: #F40F0F;
 }
 .hotel-aside-podpiska-form input,
@@ -4531,13 +4531,12 @@ footer .copy {
 .find-hotel-content-wrap {
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 45px;
 }
 .find-hotel-content {
 	width: 820px;
-	border: 1px solid red;
 }
 .find-hotel-title {
-	width: 822px;
 	height: 262px;
 	overflow: hidden;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -4575,7 +4574,7 @@ footer .copy {
 .find-hotel-subtitle {
 	font-size: 18px;
 	line-height: 24px;
-	font-weight: 700px;
+	font-weight: 700;
 	padding: 25px 0;
 	border-bottom: 2px solid #F0F6FE;
 }
@@ -4592,8 +4591,11 @@ footer .copy {
 	line-height: 21px;
 	position: relative;
 	cursor: pointer;
-	padding-left: 25px;
+	padding: 5px 25px;
 	user-select: none;
+}
+.find-hotel-filtr label:last-of-type {
+	padding-right: 0;
 }
 .find-hotel-filtr label:before {
 	content: '';
@@ -4622,6 +4624,7 @@ footer .copy {
 	margin: auto;
 	display: none;
 }
+#find-hotel-all:checked ~ .find-hotel-filtr label[for="find-hotel-all"]:after,
 #super-beach:checked ~ .find-hotel-filtr label[for="super-beach"]:after,
 #vodnye-gorki:checked ~ .find-hotel-filtr label[for="vodnye-gorki"]:after,
 #budzhetno:checked ~ .find-hotel-filtr label[for="budzhetno"]:after,
@@ -4644,12 +4647,216 @@ footer .copy {
 #thalasso-filtr:checked ~ .find-hotel-cards .hotel-item:not(.thalasso-filtr) {
 	display: none;
 }
-
-
+#find-hotel-all:checked ~ .find-hotel-cards .hotel-item {
+	display: block;
+}
 .find-hotel-aside {
 	width: 425px;
-	border: 1px solid green;
 }
-.find-hotel-alise-banners img {
+.find-hotel-aside-wrap {
+	padding: 35px;
+}
+.find-hotel-aside-banners {
+	margin: 0 -8px;
+	text-align: center;
+}
+.find-hotel-aside-banners img {
 	max-width: 100%;
+}
+.find-hotel-aside-news {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+.find-hotel-aside-news h3 {
+	width: 100%;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	border-bottom: 2px solid #F0F6FE;
+	padding-bottom: 10px;
+}
+.find-hotel-aside-news-item {
+	width: 160px;
+	margin-bottom: 20px;
+}
+.find-hotel-aside-news-pic {
+	height: 125px;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.find-hotel-aside-news-item:nth-of-type(1) .find-hotel-aside-news-pic {
+	background-image: url('../img/photo/food/1.jpg');
+}
+.find-hotel-aside-news-item:nth-of-type(2) .find-hotel-aside-news-pic {
+	background-image: url('../img/photo/food/2.jpg');
+}
+.find-hotel-aside-news-item:nth-of-type(3) .find-hotel-aside-news-pic {
+	background-image: url('../img/photo/food/3.jpg');
+}
+.find-hotel-aside-news-item:nth-of-type(4) .find-hotel-aside-news-pic {
+	background-image: url('../img/photo/food/4.jpg');
+}
+.find-hotel-aside-news-date {
+	font-size: 12px;
+	line-height: 18px;
+	display: flex;
+	align-items: center;
+	padding-top: 5px;
+}
+.find-hotel-aside-news-title {
+	font-size: 12px;
+	font-weight: 700;
+	margin: 5px 0 0;
+}
+.find-hotel-aside-news-title a {
+	color: #444343;
+	text-decoration: none;
+}
+.find-hotel-aside-news-title a:hover {
+	text-decoration: underline;
+}
+.find-hotel-aside-news-more-wrap {
+	width: 100%;
+}
+.find-hotel-aside-news-more {
+	display: block;
+	width: 100%;
+	max-width: 350px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	font-size: 14px;
+	background-color: #14BDE1;
+	border-radius: 7px;
+	margin: 15px auto;
+	padding: 10px 0;
+}
+.find-hotel-aside-podpiska {
+	padding: 30px 0 20px;
+	border-top: 2px solid #F0F6FE;
+	border-bottom: 2px solid #F0F6FE;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.find-hotel-aside-podpiska > div {
+	width: 50%;
+}
+.find-hotel-aside-podpiska > form,
+.find-hotel-aside-podpiska > form input,
+.find-hotel-aside-podpiska > form button {
+	width: 100%;
+}
+.find-hotel-aside-interes {
+	border: none;
+	padding: 20px;
+}
+@media (max-width: 1310px) {
+	.find-hotel-content {
+		padding-left: 30px;
+	}
+	.find-hotel-cards {
+		justify-content: center;
+	}
+}
+@media (max-width: 1279px) {
+	.find-hotel-content-wrap {
+		flex-wrap: wrap;
+	}
+	.find-hotel-content,
+	.find-hotel-aside {
+		width: 100%;
+	}
+	.find-hotel-content {
+		padding: 0 30px;
+	}
+	.find-hotel-aside-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.find-hotel-aside-banners img {
+		width: 33%;
+	}
+	.find-hotel-aside-news {
+		width: 100%;
+	}
+	.find-hotel-aside-podpiska {
+		width: 35%;
+	}
+	.find-hotel-aside-interes {
+		width: 30%;
+	}
+	.find-hotel-aside-podpiska {
+		border: none;
+	}
+	.find-hotel-aside-news-item {
+		width: 23%;
+	}
+	.find-hotel-aside-news-pic {
+		height: auto;
+		padding-top: 70%;
+	}
+}
+@media (max-width: 1050px) {
+	.find-hotel-aside-podpiska {
+		width: 40%;
+	}
+}
+@media (max-width: 900px) {
+	.find-hotel-aside-banners img {
+		width: 45%;
+	}
+	.find-hotel-aside-wrap {
+		justify-content: space-between;
+	}
+	.find-hotel-aside-podpiska {
+		width: 50%;
+	}
+	.find-hotel-aside-interes {
+		width: 40%;
+	}
+}
+@media (max-width: 800px) {
+	.find-hotel-filtr {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+@media (max-width: 700px) {
+	.find-hotel-aside-banners img {
+		width: auto;
+		max-width: 100%;
+	}
+	.find-hotel-aside-news-item {
+		width: 48%;
+	}
+	.find-hotel-aside-podpiska {
+		display: none;
+	}
+	.find-hotel-aside-interes {
+		width: 100%;
+	}
+}
+@media (max-width: 550px) {
+	.find-hotel-cards .hotel-item {
+		margin: 0 auto 40px;
+	}
+}
+@media (max-width: 480px) {
+	.find-hotel-content {
+		padding: 0 15px;
+	}
+	.find-hotel-title {
+		border-radius: 0;
+		margin: 0 -15px;
+		padding: 0 15px;
+		text-align: center;
+	}
+	.find-hotel-aside-wrap {
+	    padding: 15px;
+	}
 }
