@@ -1877,6 +1877,7 @@ h1 {
 .big-news-title a {
 	color: #fff;
 	text-decoration: none;
+	text-shadow: 1px 1px 2px #000;
 }
 .small-news {
 	width: 430px;
@@ -2068,7 +2069,7 @@ h1 {
 		margin: 0 7px;
 	}
 }
-@media (max-width: 900px) {
+@media (max-width: 910px) {
 	.news-title-block {
 		padding-left: 0;
 	}
@@ -4858,5 +4859,125 @@ footer .copy {
 	}
 	.find-hotel-aside-wrap {
 	    padding: 15px;
+	}
+}
+
+/* novostar-life */
+.novostar-life-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 45px;
+}
+.novostar-life-section .news-wrap {
+	position: relative;
+	padding-bottom: 100px;
+}
+.novostar-life-section [type="radio"] {
+	display: none;
+}
+.novostar-life-section .small-news-wrap {
+	width: 880px;
+	column-count: 2;
+}
+.small-news:nth-of-type(5) .small-news-pic {
+	background-image: url('../img/photo/food/1.jpg');
+}
+.small-news:nth-of-type(6) .small-news-pic {
+	background-image: url('../img/photo/food/2.jpg');
+}
+.small-news:nth-of-type(7) .small-news-pic {
+	background-image: url('../img/photo/food/3.jpg');
+}
+.small-news:nth-of-type(8) .small-news-pic {
+	background-image: url('../img/photo/food/4.jpg');
+}
+.go-to-news-part {
+	position: absolute;
+	bottom: 70px;
+	right: 0;
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	background-color: #14BDE1;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 30px #FFFFFF;
+	border-radius: 7px;
+	transition: .2s;
+	padding: 12px 30px;
+	text-decoration: none;
+	text-align: center
+}
+.go-to-news-part:hover {
+	box-shadow: none;
+}
+.popular-news.recommend-news .pop-news-wrap {
+	color: #fff;
+	background-color: #415560;
+}
+.popular-news.recommend-news .pop-news-wrap a {
+	color: #fff;
+}
+.novostar-life-banners {
+	width: 365px;
+}
+.novostar-life-banners img {
+	max-width: 100%;
+	margin-bottom: 12px;
+}
+@media (max-width: 1310px) {
+	.novostar-life-section {
+		padding: 0 25px;
+	}
+	.novostar-life-section .small-news-wrap {
+		width: 66%;
+		column-count: 2;
+	}
+}
+@media (max-width: 1180px) {
+	.novostar-life-section .small-news-wrap {
+		width: 480px;
+		column-count: 1;
+	}
+	.small-news:nth-of-type(5),
+	.small-news:nth-of-type(6),
+	.small-news:nth-of-type(7),
+	.small-news:nth-of-type(8) {
+		display: none;
+	}
+	.popular-news.recommend-news {
+		margin: 30px 0;
+	}
+	.novostar-life-banners {
+		width: auto;
+		margin: 0 -8px;
+		text-align: center;
+	}
+	.novostar-life-banners img {
+		width: 33%;
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 910px) {
+	.novostar-life-section .small-news-wrap {
+		width: 100%;
+	}
+	.novostar-life-banners img {
+		width: 45%;
+	}
+}
+@media (max-width: 600px) {
+	.novostar-life-banners img {
+		width: auto;
+	}
+}
+@media (max-width: 480px) {
+	.novostar-life-section {
+		padding: 0 15px;
+	}
+	.go-to-news-part {
+		left: 0;
+		margin: auto;
+		width: 200px;
 	}
 }
