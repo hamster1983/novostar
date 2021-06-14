@@ -4999,22 +4999,30 @@ footer .copy {
 .novostar-life-single-page {
 	background-color: #f0f6fe;
 }
-.novostar-life-single-title {
+.novostar-life-single-title,
+.novostar-single-title {
 	height: 262px;
 	overflow: hidden;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 7px;
-	background-image: url('../img/life-single-fon.jpg');
 	background-size: cover;
+	background-position: 50% 50%;
 	color: #fff;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	margin-bottom: 45px;
+	margin-bottom: 35px;
 }
-.novostar-life-single-title:before {
+.novostar-life-single-title {
+	background-image: url('../img/life-single-fon.jpg');
+}
+.novostar-single-title {
+	background-image: url('../img/single-fon.jpg');
+}
+.novostar-life-single-title:before,
+.novostar-single-title:before {
 	position: absolute;
 	content: '';
 	display: block;
@@ -5024,22 +5032,31 @@ footer .copy {
 	height: 100%;
 	background-color: rgba(0,0,0,.3);
 }
-.novostar-life-single-title h1 {
+.novostar-life-single-title h1,
+.novostar-single-title h1 {
 	font-size: 36px;
 	line-height: 49px;
 	font-weight: 700;
 	margin: 0;
 	position: relative;
 }
-.novostar-life-single-title span {
+.novostar-life-single-title span,
+.novostar-life-title span {
 	font-size: 18px;
 	line-height: 24px;
 	position: relative;
 }
-.novostar-life-single-content {
+.novostar-life-single-content,
+.novostar-single-content {
 	padding: 35px 105px;
 	font-size: 14px;
 	line-height: 21px;
+}
+.novostar-life-single-content {
+	padding: 35px 105px;
+}
+.novostar-single-content {
+	padding: 25px 55px 55px;
 }
 .novostar-life-single-content h2 {
 	font-size: 24px;
@@ -5048,6 +5065,11 @@ footer .copy {
 	border-bottom: 2px solid #F0F6FE;
 	padding-bottom: 25px;
 }
+.novostar-single-content h2 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 700;
+}
 .novostar-life-single-info {
 	color: #14BDE1;
 	font-size: 16px;
@@ -5055,13 +5077,68 @@ footer .copy {
 	font-weight: 700;
 	padding: 10px 0;
 }
-.novostar-life-single-content h3 {
+.novostar-life-single-content h3,
+.novostar-single-content h3 {
 	font-size: 16px;
 	line-height: 21px;
 	font-weight: 700;
 }
-.novostar-life-single-content img {
+.novostar-life-single-content img,
+.novostar-single-content img {
 	max-width: 100%;
+}
+.novostar-single-dobble-pic {
+	display: flex;
+	justify-content: space-between;
+}
+.novostar-single-dobble-pic img {
+	display: block;
+	flex-shrink: 0;
+	max-width: 100%;
+	width: 49%;
+}
+.novostar-life-single-share {
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	padding: 15px 0;
+	border-bottom: 2px solid #F0F6FE;
+}
+.novostar-life-single-share span {
+	padding-right: 30px;
+}
+.novostar-life-single-share img {
+	margin: 0 2px;
+}
+.novostar-life-single-arr {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.novostar-life-single-arr a {
+	display: block;
+	width: 180px;
+	border: 2px solid #14BDE1;
+	border-radius: 3px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 19px;
+	position: relative;
+	padding: 3px 0;
+	text-decoration: none;
+	color: #333434;
+}
+.novostar-life-single-prev:before {
+	content: url('../img/blue-arr-left.png');
+	position: absolute;
+	left: 7px;
+}
+.novostar-life-single-next:before {
+	content: url('../img/blue-arr-right.png');
+	position: absolute;
+	right: 7px;
 }
 .novostar-life-single-recommend {
 	padding: 30px 105px 15px;
@@ -5093,20 +5170,81 @@ footer .copy {
 	height: auto;
 	padding-top: 70%;
 }
+.aside-our-hotels-content {
+	padding-left: 15px;
+}
+.aside-our-hotels-item {
+	padding: 15px 0;
+	border-bottom: 2px solid #F0F6FE;
+	display: flex;
+	text-decoration: none;
+	color: #333434;
+}
+.aside-our-hotels-pic {
+	width: 120px;
+	height: 120px;
+	flex-shrink: 0;
+}
+.aside-our-hotels-title {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 700;
+}
+.aside-our-hotels-conditions {
+	font-size: 14px;
+	line-height: 19px;
+}
+.aside-our-hotels-price {
+	color: #14BDE1;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 700;
+}
+.aside-our-hotels-offer {
+	color: #9B9A9A;
+	font-size: 11px;
+	line-height: 14px;
+}
+.novostar-life-single-banners {
+	margin-top: 15px;
+}
 @media (max-width: 1279px) {
+	.novostar-single-content {
+		margin-bottom: 45px;
+	}
 	.novostar-life-single-title {
 		border-radius: 0;
 	}
 	.novostar-life-single-recommend {
 		margin-bottom: 30px;
 	}
+	.aside-our-hotels {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.aside-our-hotels h2 {
+		width: 100%;
+	}
+	.aside-our-hotels-item {
+		width: 350px;
+		margin-right: 20px;
+	}
 }
 @media (max-width: 991px) {
-	.novostar-life-single-page .find-hotel-content {
+	.novostar-life-single-page .find-hotel-content,
+	.novostar-single-page .find-hotel-content {
 		padding: 0;
+	}
+	.novostar-single-title {
+		border-radius: 0;
 	}
 	.novostar-life-single-content {
 		padding: 35px 50px;
+	}
+	.novostar-single-content {
+		padding: 35px;
 	}
 	.novostar-life-single-recommend {
 		border-radius: 0;
@@ -5118,16 +5256,49 @@ footer .copy {
 		width: 100%;
 		padding-bottom: 30px;
 	}
+	.novostar-single-dobble-pic {
+		flex-wrap: wrap;
+	}
+	.novostar-single-dobble-pic img {
+		width: auto;
+		margin: 10px auto;
+	}
 }
 @media (max-width: 480px) {
-	.novostar-life-single-title {
+	.novostar-life-single-title,
+	.novostar-single-title {
 		padding: 0 15px;
 		text-align: center;
 	}
-	.novostar-life-single-content {
+	.novostar-life-single-content,
+	.novostar-single-content {
 		padding: 20px 25px;
+	}
+	.novostar-life-single-arr {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.novostar-life-single-arr a {
+		margin: 10px;
 	}
 	.novostar-life-single-recommend {
 		padding: 20px 25px 15px;
+	}
+	.aside-our-hotels-item {
+		margin-right: 0;
+	}
+	.aside-our-hotels-star {
+		width: 15px;
+	}
+	.aside-our-hotels-title {
+		font-size: 12px;
+	}
+	.aside-our-hotels-conditions {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.aside-our-hotels-price {
+		font-size: 18px;
+		line-height: 24px;
 	}
 }
