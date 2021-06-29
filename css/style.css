@@ -609,6 +609,8 @@ h1 {
 }
 .hotels-slider {
 	width: 820px;
+	opacity: 0;
+	transition: .3s;
 }
 .hotels-slider .slick-list {
 	overflow: visible;
@@ -1235,6 +1237,9 @@ h1 {
 }
 .gallery-labels {
 	width: 20%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
 .gallery-labels label {
 	display: block;
@@ -1244,7 +1249,7 @@ h1 {
 	font-size: 14px;
 	padding: 70px 0 0 15px;
 	position: relative;
-	margin-bottom: 17px;
+	/*margin-bottom: 17px;*/
 	cursor: pointer;
 	border: 2px solid transparent;
 }
@@ -1542,7 +1547,8 @@ h1 {
 .more-video-btn:hover {
 	box-shadow: none;
 }
-.video-popup {
+.video-popup,
+.map-popup {
 	position: fixed;
 	top: 0;
 	width: 100vw;
@@ -1554,7 +1560,8 @@ h1 {
 	z-index:-1;
 	background-color: rgba(0,0,0,.7);
 }
-.video-popup.visible {
+.video-popup.visible,
+.map-popup.visible {
 	opacity: 1;
 	z-index: 9999;
 }
@@ -1565,6 +1572,13 @@ h1 {
 	max-width: 1000px;
 	padding-top: 60vh;
 }
+.map-wrap {
+	background-color: #fff;
+	position: relative;
+	width: 100%;
+	max-width: 1280px;
+	padding-top: 80vh;
+}
 .video-popup iframe {
 	display: block;
 	position: absolute;
@@ -1574,8 +1588,23 @@ h1 {
 	top: 5%;
 	width: 90%;
 	height: 90%;
+	border: none;
 }
-.close-video-popup {
+.map-popup iframe {
+	display: block;
+	position: absolute;
+	width: auto;
+	height: auto;
+	left: 3%;
+	top: 3%;
+	top: 3%;
+	bottom: 3%;
+	width: 94%;
+	height: 94%;
+	border: none;
+}
+.close-video-popup,
+.close-map-popup {
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -2543,13 +2572,33 @@ footer .copy {
 	border-left: 2px solid #F0F6FE;
 }
 .hotel-map {
-	border: none;
-	display: block;
 	width: 265px;
 	height: 160px;
-	outline: none;
+	background-image: url('../img/ham-map.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+	display: flex;
+	justify-content: center;
+	align-items:center;
 }
-
+.hotel-map-btn {
+	border: none;
+	outline: none;
+	display: block;
+	width: 150px;
+	padding: 10px 0;
+	background-color: rgba(20, 189, 225, 0.7);
+	border-radius: 7px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: .2s;
+}
+.hotel-map-btn:hover {
+	background-color: rgba(20, 189, 225, 1);
+}
 @media (max-width: 1310px) {
 	.breadcrumbs {
 		padding: 20px 35px;
@@ -5000,7 +5049,8 @@ footer .copy {
 	background-color: #f0f6fe;
 }
 .novostar-life-single-title,
-.novostar-single-title {
+.novostar-single-title,
+.novostar-team-title {
 	height: 262px;
 	overflow: hidden;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -5021,8 +5071,12 @@ footer .copy {
 .novostar-single-title {
 	background-image: url('../img/single-fon.jpg');
 }
+.novostar-team-title {
+	background-image: url('../img/our-team-fon.jpg');
+}
 .novostar-life-single-title:before,
-.novostar-single-title:before {
+.novostar-single-title:before,
+.novostar-team-title:before {
 	position: absolute;
 	content: '';
 	display: block;
@@ -5033,7 +5087,8 @@ footer .copy {
 	background-color: rgba(0,0,0,.3);
 }
 .novostar-life-single-title h1,
-.novostar-single-title h1 {
+.novostar-single-title h1,
+.novostar-team-title h1 {
 	font-size: 36px;
 	line-height: 49px;
 	font-weight: 700;
@@ -5041,7 +5096,8 @@ footer .copy {
 	position: relative;
 }
 .novostar-life-single-title span,
-.novostar-life-title span {
+.novostar-life-title span,
+.novostar-team-title span {
 	font-size: 18px;
 	line-height: 24px;
 	position: relative;
@@ -5058,6 +5114,9 @@ footer .copy {
 .novostar-single-content {
 	padding: 25px 55px 55px;
 }
+.novostar-team-content {
+	padding: 25px 35px;
+}
 .novostar-life-single-content h2 {
 	font-size: 24px;
 	line-height: 32px;
@@ -5065,10 +5124,23 @@ footer .copy {
 	border-bottom: 2px solid #F0F6FE;
 	padding-bottom: 25px;
 }
-.novostar-single-content h2 {
+.novostar-single-content h2,
+.novostar-team-content h2 {
 	font-size: 24px;
 	line-height: 32px;
 	font-weight: 700;
+}
+.novostar-team-content h2 {
+	margin: 5px 0;
+}
+.novostar-team-content a {
+	color: #333434;
+}
+.novostar-team-subtitle {
+	font-size: 14px;
+	line-height: 21px;
+	padding-bottom: 7px;
+	border-bottom: 2px solid #F0F6FE;
 }
 .novostar-life-single-info {
 	color: #14BDE1;
@@ -5237,7 +5309,8 @@ footer .copy {
 	.novostar-single-page .find-hotel-content {
 		padding: 0;
 	}
-	.novostar-single-title {
+	.novostar-single-title,
+	.novostar-team-title {
 		border-radius: 0;
 	}
 	.novostar-life-single-content {
@@ -5300,5 +5373,64 @@ footer .copy {
 	.aside-our-hotels-price {
 		font-size: 18px;
 		line-height: 24px;
+	}
+}
+
+
+/* our team */
+.novostar-team-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/*padding-top: 35px;*/
+	margin: 0 -35px;
+}
+.novostar-team-item {
+	width: 225px;
+	height: 240px;
+	background-color: #F2F1F0;
+	border-radius: 19px;
+	position: relative;
+	text-align: center;
+	padding: 125px 10px 0;
+	margin: 60px 20px 0;
+}
+.novostar-team-pic {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: -40px;
+}
+.novostar-team-name {
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.novostar-team-position {
+	font-size: 14px;
+	line-height: 21px;
+	color: #9B9A9A;
+}
+.novostar-team-offset {
+	padding-top: 60px;
+}
+.novostar-team-bottom-menu {
+	padding: 30px 0;
+}
+.novostar-team-bottom-menu a {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 700;
+	color: #333434;
+	padding-right: 40px;
+}
+.novostar-team-bottom-menu a.active {
+	color: #14BDE1;
+}
+@media (max-width: 991px) {
+	.novostar-team-bottom-menu {
+		padding: 30px;
 	}
 }

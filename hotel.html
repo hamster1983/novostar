@@ -23,8 +23,8 @@
 		<div class="gallery-popup">
 			<img src="img/close-blue-btn.png" alt="" class="close-gallery-popup">
 
-			<input type="radio" name="gallery-btn" id="gal-all" data-title="Всё" data-count="5" data-gallery="allGallery" checked>
-			<input type="radio" name="gallery-btn" id="gal-anim" data-title="Анимация" data-count="14" data-gallery="animGallery">
+			<!--<input type="radio" name="gallery-btn" id="gal-all" data-title="Всё" data-count="5" data-gallery="allGallery">-->
+			<input type="radio" name="gallery-btn" id="gal-anim" data-title="Анимация" data-count="14" data-gallery="animGallery" checked>
 			<input type="radio" name="gallery-btn" id="gal-event" data-title="Для детей" data-count="8" data-gallery="eventGallery">
 			<input type="radio" name="gallery-btn" id="gal-food" data-title="Еда" data-count="10" data-gallery="foodGallery">
 			<input type="radio" name="gallery-btn" id="gal-see" data-title="Экскурсии" data-count="6" data-gallery="seeGallery">
@@ -33,6 +33,13 @@
 
 			<div class="gallery-labels"><!-- see scripts.js --></div>
 			<div class="gallery-slider"><!-- see scripts.js --></div>
+		</div>
+	</div>
+
+	<div class="map-popup" data-popup="wrap">
+		<div class="map-wrap" data-popup="content">
+			<img src="img/close-blue-btn.png" alt="" class="close-map-popup" data-close="popup">
+			<iframe src="" allowfullscreen="" loading="lazy"></iframe>
 		</div>
 	</div>
 
@@ -129,7 +136,7 @@
 		<div class="hotel-page">
 			<div class="container">
 				<div class="breadcrumbs">
-					Главная / Отели / Страны / Курорты / Novostar Bel Azur
+					Главная / Отели / Novostar Bel Azur
 				</div>
 				<div class="hotel-content-wrap">
 					<div class="hotel-content">
@@ -179,7 +186,10 @@
 								<button class="hotel-get-tour">Подобрать тур</button>
 							</div>
 							<div class="hotel-info-map">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12844.56090169426!2d10.612020490685442!3d36.405802500420855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd61fc0dac1583%3A0x8f1c841291df5ff!2z0KXQsNC80LzQsNC80LXRgiwg0KLRg9C90LjRgQ!5e0!3m2!1sru!2sru!4v1622017797808!5m2!1sru!2sru" class="hotel-map" allowfullscreen="" loading="lazy"></iframe>
+								<div class="hotel-map">
+									<button class="hotel-map-btn" data-link="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12844.56090169426!2d10.612020490685442!3d36.405802500420855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd61fc0dac1583%3A0x8f1c841291df5ff!2z0KXQsNC80LzQsNC80LXRgiwg0KLRg9C90LjRgQ!5e0!3m2!1sru!2sru!4v1622017797808!5m2!1sru!2sru">Смотреть карту</button>
+								</div>
+								<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12844.56090169426!2d10.612020490685442!3d36.405802500420855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd61fc0dac1583%3A0x8f1c841291df5ff!2z0KXQsNC80LzQsNC80LXRgiwg0KLRg9C90LjRgQ!5e0!3m2!1sru!2sru!4v1622017797808!5m2!1sru!2sru" class="hotel-map" allowfullscreen="" loading="lazy"></iframe>-->
 							</div>
 						</div>
 
@@ -528,6 +538,38 @@
 									<div class="hotel-rooms-item">
 										<div class="hotel-rooms-pic"><img src="img/hotel/family.jpg" alt=""></div>
 										<h4>Семейный номер</h4>
+										<ul>
+											<li>Общая площадь 32 м²</li>
+											<li>Максимально размещение: <img src="img/hotel/people-in-room.png" alt=""></li>
+											<li>Вид: на сад, на море</li>
+										</ul>
+										<a href="#" class="hotel-rooms-modal"><b>Подробнее...</b></a>
+										<div class="hotel-rooms-btn">
+											<a href="#"><img src="img/hotel/360.png" alt=""></a>
+											<button class="hotel-get-tour">Подобрать тур</button>
+										</div>
+										<div class="hotel-rooms-hidden">
+											<ul>
+												<li>Wi-Fi</li>
+												<li>Кондиционер</li>
+												<li>Телефон</li>
+												<li>Плазменная телевизионная панель (USB-разъём для подключения флеш-карты, русские каналы)</li>
+												<li>Сейф</li>
+												<li>Мини-холодильник</li>
+												<li>Чайник и чайная посуда, пополняемый чайно-кофейный набор в индивидуальных упаковках</li>
+												<li>Ванна или душевая, фен, халат и тапочки, средства личной гигиены в индивидуальной упаковке пополняются ежедневно</li>
+												<li>Комплимент от отеля в день заезда: бутылка воды и традиционные сладости</li>
+												<li>Ежедневная уборка и смена полотенец</li>
+												<li>Смена постельного белья – каждые 3 дня</li>
+												<li>Напольное покрытие: плитка</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="hotel-rooms-item">
+										<div class="hotel-rooms-pic"><img src="img/hotel/bungalo.jpg" alt=""></div>
+										<h4>Бунгало</h4>
 										<ul>
 											<li>Общая площадь 32 м²</li>
 											<li>Максимально размещение: <img src="img/hotel/people-in-room.png" alt=""></li>

@@ -1,6 +1,10 @@
-$(window).on('load',function(){
+/*$(window).on('load',function(){
   $('.preloader').css({'opacity': 0, 'z-index': -1})
   $('body').css('overflow','visible');
+});*/
+
+$(window).on('load',function(){
+  $('.hotels-slider').css('opacity',1);
 });
 
 $(document).ready(function(){
@@ -76,13 +80,13 @@ $(document).ready(function(){
 
 
     //массивы объектов с путями к картинкам и подписями
-    const allGallery = [
+    /*const allGallery = [
       { 'src': 'img/photo/all/1.jpg', 'title': 'Люди с флагами' },
       { 'src': 'img/photo/all/2.jpg', 'title': 'Пенная вечеринка' },
       { 'src': 'img/photo/all/3.jpg', 'title': 'Экскурсия' },
       { 'src': 'img/photo/all/4.jpg', 'title': 'Завтрак у бассейна' },
       { 'src': 'img/photo/all/5.jpg', 'title': 'Лежаки' }
-    ];
+    ];*/
 
     const animGallery = [
       { 'src': 'img/photo/anim/1.jpg', 'title': 'Пенная вечеринка' },
@@ -196,7 +200,7 @@ $(document).ready(function(){
     });
 
 
-    //открытие видео в popup
+    //открытие видео на главной в popup
     $('.big-video, .small-video').on('click', function(){
       let link = '';
       $(this).children('img').each(function(){
@@ -207,7 +211,6 @@ $(document).ready(function(){
       $('.video-popup').addClass('visible');
       $('.video-popup iframe').attr('src','https://www.youtube.com/embed/'+link+'?autoplay=1');
     });
-
     $('.close-video-popup').on('click', function(){
       $('.video-popup').removeClass('visible');
       $('.video-popup iframe').attr('src','');
@@ -218,6 +221,13 @@ $(document).ready(function(){
       let link = $(this).children('img').attr('data-link');
       $('.video-popup').addClass('visible');
       $('.video-popup iframe').attr('src','https://www.youtube.com/embed/'+link+'?autoplay=1');
+    });
+
+    //карта на странице отеля
+    $('.hotel-map-btn').on('click',function(){
+      let link = $(this).attr('data-link');
+      $('.map-popup').addClass('visible');
+      $('.map-popup iframe').attr('src',link);
     });
 
     // меню в разделе ОТЕЛЬ
