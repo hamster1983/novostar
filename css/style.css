@@ -445,6 +445,7 @@ h1 {
 	font-size: 19px;
 	font-weight: 700;
 	margin: 10px 0 35px;
+	visibility: hidden;
 }
 .weather {
 	width: 470px;
@@ -2568,12 +2569,24 @@ footer .copy {
 	box-shadow: none;
 }
 .hotel-info-map {
-	padding: 20px 5px 0 30px;
+	padding: 0 5px 0 30px;
 	border-left: 2px solid #F0F6FE;
+	width: 300px;
+}
+.hotel-info-map h3 {
+	margin-top: 0;
+	position: relative;
+	padding-left: 40px;
+}
+.hotel-info-map h3:before {
+	content: url('../img/hotel/schema.png');
+	position: absolute;
+	left: 0;
 }
 .hotel-map {
-	width: 265px;
-	height: 160px;
+	margin-top: 20px;
+	/*width: 265px;*/
+	height: 300px;
 	background-image: url('../img/ham-map.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
@@ -2633,13 +2646,15 @@ footer .copy {
 		padding-left: 15px;
 	}
 	.hotel-info-map {
-		padding: 20px 0 0 10px;
+		/*padding: 20px 0 0 10px;*/
+		padding: 5px 0 0 20px;
+		width: 270px;
 	}
 	.hotel-map {
-		width: 200px;
+		/*width: 200px;*/
 	}
 }
-@media (max-width: 720px) {
+@media (max-width: 767px) {
 	.hotel-info {
 		flex-wrap: wrap;
 	}
@@ -3022,7 +3037,8 @@ footer .copy {
 }
 .hotel-schema {
 	position: relative;
-	height: 255px;
+	/*height: 255px;*/
+	height: 140px;
 	filter: drop-shadow(-1px 1px 4px rgba(0, 0, 0, 0.25));
 	background-image: url('../img/hotel/schema.jpg');
 	background-size: cover;
@@ -3057,12 +3073,17 @@ footer .copy {
 		width: 100%;
 	}
 	.hotel-schema {
-		height: 450px;
+		/*height: 450px;*/
 	}
 }
 @media (max-width: 900px) {
 	.hotel-place-text {
 		padding-left: 10px;
+	}
+}
+@media (max-width: 767px) {
+	.hotel-schema {
+		height: 260px;
 	}
 }
 @media (max-width: 750px) {
@@ -3089,11 +3110,11 @@ footer .copy {
 		padding: 0;
 	}
 }
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
 	.hotel-schema {
 		height: 260px;
 	}
-}
+}*/
 @media (max-width: 360px) {
 	.hotel-place-detail {
 	    padding-left: 30px;
@@ -5432,5 +5453,104 @@ footer .copy {
 @media (max-width: 991px) {
 	.novostar-team-bottom-menu {
 		padding: 30px;
+	}
+}
+
+/* aparts */
+.apart-nav-booking {
+	margin-left: auto;
+}
+.aparts-wrap {
+	margin-top: 45px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-bottom: 10px;
+}
+.aparts-item {
+	border: 1px solid #F7F7F7;
+	display: flex;
+	width: 49%;
+	margin-bottom: 15px;
+}
+.aparts-pic {
+	display: block;
+	width: 52%;
+}
+.aparts-pic img {
+	width: 100%;
+	display: block;
+}
+.aparts-info {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	width: 48%;
+}
+.aparts-title {
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 700;
+	margin: 0 0 5px;
+}
+.aparts-subtitle {
+	font-size: 12px;
+}
+.aparts-subtitle ul {
+	padding-left: 15px;
+}
+.aparts-description {
+	padding: 10px 0;
+}
+.aparts-more {
+	color: #444343;
+	font-weight: 700;
+	align-self: flex-end;
+	margin-top: auto;
+}
+.apart-place-detail {
+	flex-direction: column;
+}
+.apart-place-plan {
+	padding-bottom: 20px;
+	padding-right: 15px;
+}
+.apart-place-plan h3 {
+	margin-bottom: 0;
+}
+.apart-place-plan .hotel-schema {
+	height: 255px;
+}
+.apart-infra {
+	margin-top: 45px;
+	/*padding: 20px 50px;*/
+}
+.apart-infra h3 {
+	padding-left: 40px;
+}
+.apart-infra h3:before {
+	left: 0;
+}
+.apart-map iframe {
+	height: 400px;
+	width: 100%;
+}
+@media (max-width: 800px) {
+	.aparts-item {
+		width: 100%;
+	}
+}
+@media (max-width: 750px) {
+	.apart-place-plan {
+		padding-right: 0;
+	}
+	.apart-place-plan h3 {
+		margin-bottom: 15px;
+	}
+}
+@media (max-width: 670px) {
+	.apart-nav-booking {
+		margin-left: 10px;
 	}
 }

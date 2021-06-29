@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Novostar Hotels</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta property="og:title" content="">
+ 	<meta property="og:description" content="">
+	<meta property="og:image" content="">
+	<link href="img/favicon.png" rel="shortcut icon" type="image/x-icon" />
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
+    <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/aos.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+	<div class="gallery-popup-wrap">
+		<div class="gallery-popup">
+			<img src="img/close-blue-btn.png" alt="" class="close-gallery-popup">
+
+			<!--<input type="radio" name="gallery-btn" id="gal-all" data-title="Всё" data-count="5" data-gallery="allGallery">-->
+			<input type="radio" name="gallery-btn" id="gal-anim" data-title="Анимация" data-count="14" data-gallery="animGallery" checked>
+			<input type="radio" name="gallery-btn" id="gal-event" data-title="Для детей" data-count="8" data-gallery="eventGallery">
+			<input type="radio" name="gallery-btn" id="gal-food" data-title="Еда" data-count="10" data-gallery="foodGallery">
+			<input type="radio" name="gallery-btn" id="gal-see" data-title="Экскурсии" data-count="6" data-gallery="seeGallery">
+
+			<h3 class="gallery-title">Фотографии от Novostar Hotels <span class="gal-title-info"><span class="gal-title"></span> <span class="gal-current-slide">1</span>/<span class="gal-all-slides"></span></span></h3>
+
+			<div class="gallery-labels"><!-- see scripts.js --></div>
+			<div class="gallery-slider"><!-- see scripts.js --></div>
+		</div>
+	</div>
+
+	<div class="map-popup" data-popup="wrap">
+		<div class="map-wrap" data-popup="content">
+			<img src="img/close-blue-btn.png" alt="" class="close-map-popup" data-close="popup">
+			<iframe src="" allowfullscreen="" loading="lazy"></iframe>
+		</div>
+	</div>
+
+	<div class="video-popup" data-popup="wrap">
+		<div class="iframe-wrap" data-popup="content">
+			<img src="img/close-blue-btn.png" alt="" class="close-video-popup" data-close="popup">
+			<iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video-all"></iframe>
+		</div>
+	</div>
+
+	<div class="text-popup-wrap" data-popup="wrap">
+		<div class="text-popup" data-popup="content">
+			<img src="img/close-blue-btn.png" alt="" class="close-text-popup" data-close="popup">
+			<div class="text-popup-body"></div>
+		</div>
+	</div>
+
+	<div class="image-popup-wrap" data-popup="wrap">
+		<span class="image-popup" data-popup="content">
+			<img src="img/close-blue-btn.png" alt="" class="close-image-popup" data-close="popup">
+			<img src="" alt="" class="image-popup-pic">
+		</span>
+	</div>
+
+	<div class="hotel-rooms-popup-wrap" data-popup="wrap">
+		<div class="hotel-rooms-popup" data-popup="content">
+			<img src="img/hotel/big-btn-close.png" alt="" class="close-hotel-rooms-popup" data-close="popup">
+			<div class="hotel-rooms-popup-text">
+				<h3>В номере</h3>
+				<div class="hotel-rooms-popup-content"></div>
+			</div>
+			<div class="hotel-rooms-popup-pic">
+				<img src="" alt="">
+				<button class="hotel-rooms-popup-booking">Забронировать</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="content-wrap">
+
+		<header>
+			<div class="container">
+				<a href="/"><img src="img/logo.png" alt="" class="top-logo"></a>
+				<nav class="navbar">
+					<input type="image" src="img/burger.png" alt="" class="navbar-toggler">
+					<div class="navbar-nav">
+						<div class="mob-logo">
+							<img src="img/logo-mobile.png" alt="">
+							<input type="image" src="img/close.png" alt="" class="close-btn">
+						</div>
+						<div class="mob-menu-title">Меню</div>
+						<ul class="nav-links">
+							<li class="dropdown-item">
+								<a href="#" class="nav-link hotels">Отели</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Novostar Houda Golf Beach & Aquapark 3*</a></li>
+									<li><a href="#">Novostar Royal Beach 3*</a></li>
+									<li><a href="#">Novostar Iris Hotel & Thalasso 4*</a></li>
+									<li><a href="#">Novostar Vincci Marillia 4*</a></li>
+									<li><a href="#">Novostar Bel Azur Thalassa & Bungalows 4*</a></li>
+									<li><a href="#">Club Novostar Sol Azur Beach Congress 4*</a></li>
+									<li><a href="#">Novostar Khayam Garden Beach & Spa 4*</a></li>
+									<li><a href="#">Club Novostar Omar Khayam Resort & Aqua Park 3*</a></li>
+									<li><a href="#">Club Novostar Dar Khayam Hotels 3*</a></li>
+									<li><a href="#">Novostar Budget Pyramides Club & Spa 3*</a></li>
+								</ul>
+							</li>
+							<li><a href="#" class="nav-link about-novostar">О Novostar</a></li>
+							<li><a href="#" class="nav-link novostar-life">Novostar Life</a></li>
+							<li><a href="#" class="nav-link info">Информация</a></li>
+							<li><a href="#" class="nav-link your-booking">Ваше бронирование</a></li>
+							<li><a href="#" class="nav-link akcii">Акции и спецпредложения</a></li>
+						</ul>
+						<select class="lang-select">
+							<option value="ru">Ru</option>
+							<option value="en">En</option>
+						</select>
+						<ul class="soc-icons">
+							<li><a href="#" class="mob-ru">Ru</a></li>
+							<li><a href="#" class="mob-en">En</a></li>
+							<li><a href="#" class="soc-icon yt" target="_blank"></a></li>
+							<li><a href="#" class="soc-icon vk" target="_blank"></a></li>
+							<li><a href="#" class="soc-icon inst" target="_blank"></a></li>
+							<li><a href="#" class="soc-icon fb" target="_blank"></a></li>
+							<li><a href="#" class="soc-icon zen" target="_blank"></a></li>
+							<li><a href="#" class="soc-icon tg" target="_blank"></a></li>
+						</ul>
+						<button class="nav-booking">Забронировать</button>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<div class="hotel-page">
+			<div class="container">
+				<div class="breadcrumbs">
+					Главная / Отели / Аппартаменты
+				</div>
+				<div class="hotel-content-wrap">
+					<div class="hotel-content">
+
+						<nav class="hotel-nav hotel-shadow-block">
+							<a href="#apart-place">Местоположение</a>
+							<a href="#apart-infra">Инфраструктура</a>
+							<a href="#apart-important">Информация</a>
+							<button class="hotel-nav-booking apart-nav-booking">Забронировать</button>
+						</nav>
+
+						<div class="aparts-wrap hotel-shadow-block">
+							<div class="aparts-item">
+								<a href="#" class="aparts-pic"><img src="img/apart.jpg" alt=""></a>
+								<div class="aparts-info">
+									<h4 class="aparts-title">Аппартаменты 1</h4>
+									<div class="aparts-subtitle">
+										<span>1-комн. апартаменты, 40 м²</span>
+										<ul>
+											<li>Количество гостей: 3 чел</li>
+											<li>Вид: на сад, на море</li>
+										</ul>
+									</div>
+									<div class="aparts-description">
+
+									</div>
+									<a href="#" class="aparts-more">Подробнее...</a>
+								</div>
+							</div>
+							<div class="aparts-item">
+								<a href="#" class="aparts-pic"><img src="img/apart.jpg" alt=""></a>
+								<div class="aparts-info">
+									<h4 class="aparts-title">Аппартаменты 1</h4>
+									<div class="aparts-subtitle">
+										<span>1-комн. апартаменты, 40 м²</span>
+									</div>
+									<div class="aparts-description">
+										• Описание<br>
+										• Описание<br>
+										• Описание<br>
+										• Описание<br>
+										• Описание<br>
+										• Описание
+									</div>
+									<a href="#" class="aparts-more">Подробнее...</a>
+								</div>
+							</div>
+							<div class="aparts-item">
+								<a href="#" class="aparts-pic"><img src="img/apart.jpg" alt=""></a>
+								<div class="aparts-info">
+									<h4 class="aparts-title">Аппартаменты 1</h4>
+									<div class="aparts-subtitle">
+										<span>1-комн. апартаменты, 40 м²</span>
+									</div>
+									<div class="aparts-description">
+										• Описание<br>
+										• Описание<br>
+										• Описание<br>
+										• Описание<br>
+										• Описание<br>
+										• Описание
+									</div>
+									<a href="#" class="aparts-more">Подробнее...</a>
+								</div>
+							</div>
+							<div class="aparts-item">
+								<a href="#" class="aparts-pic"><img src="img/apart.jpg" alt=""></a>
+								<div class="aparts-info">
+									<h4 class="aparts-title">Аппартаменты 1</h4>
+									<div class="aparts-subtitle">
+										<span>1-комн. апартаменты, 40 м²</span>
+									</div>
+									<div class="aparts-description">
+										• Описание<br>
+										• Описание<br>
+										• Описание<br>
+										• Описание<br>
+										• Описание<br>
+										• Описание
+									</div>
+									<a href="#" class="aparts-more">Подробнее...</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="hotel-place hotel-shadow-block" id="apart-place">
+							<div class="hotel-place-text">
+								<h3 class="hotel-polozhenie">Местоположение аппартаментов</h3>
+								<div class="hotel-place-detail apart-place-detail">
+									<div class="hotel-airport">
+										<h4>Расстояние до аэропортов:</h4>
+										<ul>
+											<li>Тунис – 70 км</li>
+											<li>Энфида – 55 км</li>
+											<li>Монастир – 115 км</li>
+										</ul>
+									</div>
+									<div class="hotel-center">
+										<h4>Расстояние до центра:</h4>
+										<ul>
+											<li>Старый город – 2 км</li>
+											<li>Ясмин Хаммамет – 12 км</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="hotel-place-plan apart-place-plan">
+								<h3>Схема апартаментов</h3>
+								<div class="hotel-schema">
+									<img src="img/hotel/loop.png" alt="" class="open-image-popup" data-link="img/hotel/schema.jpg">
+								</div>
+							</div>
+						</div>
+
+						<div class="hotel-shadow-block apart-infra" id="apart-infra">
+							<h3 class="hotel-infra">Инфраструктура в шаговой доступности</h3>
+							<p class="hotel-infra-text">Отель Bel Azur Thalasso & Bungalows расположен прямо на пляже в Хаммамете, недалеко от центра города и Медины. Отель расположен в туристической зоне, где вы найдете большое количество сувинирных лавок, фруктовых лавок и магазин косметики Lagune.</p>
+							<div class="apart-map">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51757.441357241696!2d10.583035010904553!3d35.82839906110373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130275759ac9d10d%3A0x698e3915682cef7d!2z0KHRg9GBLCDQotGD0L3QuNGB!5e0!3m2!1sru!2sru!4v1624974228551!5m2!1sru!2sru" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							</div>
+						</div>
+
+						<div class="hotel-inportant-info hotel-shadow-block" id="apart-important">
+							<div class="hotel-inportant-info-wrap">
+								<h3>Важная информация</h3>
+								<div class="hotel-inportant-info-item">
+									<h4 class="hotel-inportant-uslovia">Условия заселения</h4>
+									<div class="hotel-zaezd">
+										<div class="hotel-zaezd-text">
+											Заселение<br><b>После 15.00</b>
+										</div>
+										<div class="hotel-zaezd-time">
+											<div class="hotel-time-item">15:00</div>
+											<img src="img/hotel/range-after.png" alt="">
+										</div>
+									</div>
+									<div class="hotel-vyezd">
+										<div class="hotel-vyezd-text">
+											Выезд<br><b>До 12.00</b>
+										</div>
+										<div class="hotel-vyezd-time">
+											<div class="hotel-time-item">12:00</div>
+											<img src="img/hotel/range-before.png" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="hotel-inportant-info-item">
+									<h4 class="hotel-inportant-pets">Размещение с животными</h4>
+									<p>В отеле Novostar Bel Azur разрешено размещение с домашними животными весом не более 5 кг. Больше информации и правила по ссылке <a href="#"><b>Подробнее...</b></a></p>
+								</div>
+								<div class="hotel-inportant-info-item">
+									<h4 class="hotel-inportant-season">Низкий/средний сезон</h4>
+									<ul>
+										<li>Концепция Новостар реализуется в отелях сети с 15 мая по 30 сентября.</li>
+										<li>Локации, предполагающие обслуживание гостей на открытом воздухе (например, бар на пляже), в отелях Туниса, как правило, функционируют в период с 01 июня по 30 сентября.</li>
+										<li>Если в отеле менее 20 детей в возрасте от 4 до 12 лет, то детское меню представлено на основной шведской линии </li>
+									</ul>
+								</div>
+								<div class="hotel-inportant-info-item">
+									<h4 class="hotel-inportant-change">Изменение перечня заявленных услуг</h4>
+									<p>Отель оставляет за собой право до начала сезона, и даже в течение сезона, сообразуясь с текущими обстоятельствами, изменять перечень и условия предоставляемых услуг, в случае если эти изменения не затрагивают существенных условий отдыха туристов.</p>
+								</div>
+								<div class="hotel-inportant-info-item">
+									<h4 class="hotel-inportant-nalog">Туристический налог</h4>
+									<p>Согласно новому финансовому закону Тунисской Республики от 08.12.2017, все отели Туниса обязаны при регистрации в день заезда взимать туристический налог с туристов. Размер налога составляет 3 динара за ночь при размещении в отелях категории 4*-5*, 2 динара за ночь при размещении в отелях категории 3* и 1 динар за ночь при размещении в отелях 2*. Налог взимается с каждого туриста в возрасте 12 лет и старше за первые 7 ночей пребывания в отеле.</p>
+								</div>
+								<br>
+							</div>
+						</div>
+
+					</div><!-- end .hotel-content -->
+					<aside class="hotel-aside">
+						<div class="hotel-aside-wrap hotel-shadow-block">
+
+							<div class="hotel-aside-interes">
+								<h3>Вам также будет полезно</h3>
+								<ul>
+									<li><a href="#">Сравнить отели</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">О Тунисе</a></li>
+									<li><a href="#">Комментарий к размещению</a></li>
+									<li><a href="#">Telegram-канал для турагентов</a></li>
+								</ul>
+							</div>
+
+							<!--<div class="hotel-aside-podpiska">
+								<div class="hotel-aside-podpiska-pic">
+									<img src="img/hotel/tun-slov.png" alt="">
+								</div>
+								<div class="hotel-aside-podpiska-text">
+									<p>При подписке на&nbsp;нашу рассылку тунисский словарик <span>в&nbsp;подарок</span></p>
+									<form action="" class="hotel-aside-podpiska-form">
+										<input type="email" name="mail" placeholder="E-mail">
+										<button type="submit" name="submit">ПОДПИСАТЬСЯ</button>
+									</form>
+								</div>
+							</div>-->
+
+							<div class="hotel-aside-life">
+								<h3>Novostar Life</h3>
+								<div class="hotel-aside-life-item">
+									<div class="hotel-aside-life-pic"></div>
+									<h2>Туры в Тунис из СПб</h2>
+									<span class="hotel-aside-life-date">14.01.2021</span> <span>•</span> <span class="hotel-aside-life-author">Novostar Hotels</span>
+									<p class="hotel-aside-life-text">Туры в Тунис из СПб в 2020 году представлены на сайтах туроператоров Библио-Глобус, Санмар, Корал, Экспресс Тур. Страна Северной Африки превосходно подходит, чтобы...</p>
+									<a href="#" class="hotel-aside-life-detail">Читать далее...</a>
+									<div class="hotel-aside-life-metrika">
+										<div class="hotel-aside-life-view">
+											<img src="img/hotel/view.png" alt="">&nbsp;<span>1528</span>
+										</div>
+										<div class="hotel-aside-life-like">
+											<img src="img/hotel/like.png" alt="">&nbsp;<span>17</span>
+										</div>
+									</div>
+								</div>
+								<div class="hotel-aside-life-item">
+									<div class="hotel-aside-life-pic"></div>
+									<h2>Туризм после эпидемии</h2>
+									<span class="hotel-aside-life-date">13.01.2021</span> <span>•</span> <span class="hotel-aside-life-author">Novostar Hotels</span>
+									<p class="hotel-aside-life-text">Начиная с июня 2020 мир поэтапно выходит из карантина, введенного из-за пандемии коронавируса (Covid-19), в частности ослабляют и отменяют ограничения на передвижения...</p>
+									<a href="#" class="hotel-aside-life-detail">Читать далее...</a>
+									<div class="hotel-aside-life-metrika">
+										<div class="hotel-aside-life-view">
+											<img src="img/hotel/view.png" alt="">&nbsp;<span>5478</span>
+										</div>
+										<div class="hotel-aside-life-like">
+											<img src="img/hotel/like.png" alt="">&nbsp;<span>32</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="hotel-aside-recommend">
+								<h3>Рекомендуем к просмотру</h3>
+								<div class="hotel-aside-video hotel-yt">
+									<img src="img/yt/qgOp-pGSMVs.jpg" alt="" data-link="qgOp-pGSMVs">
+								</div>
+								<div class="hotel-aside-video hotel-yt">
+									<img src="img/yt/f73Dpql-5N4.jpg" alt="" data-link="f73Dpql-5N4">
+								</div>
+								<div class="hotel-aside-video hotel-yt">
+									<img src="img/yt/xSA0n8GyIXI.jpg" alt="" data-link="xSA0n8GyIXI">
+								</div>
+							</div>
+
+							<div class="hotel-aside-popular">
+								<h3>Популярное</h3>
+								<div class="hotel-aside-pop-item">
+									<div class="hotel-aside-pop-pic"></div>
+									<div class="hotel-aside-pop-text">
+										<span class="hotel-aside-pop-date"><img src="img/news-clock-dark.png" alt="">&nbsp;16.01.2021</span>
+										<h4 class="hotel-aside-pop-title"><a href="#">LAGUNE уже на WILDBERRIES!</a></h4>
+									</div>
+								</div>
+								<div class="hotel-aside-pop-item">
+									<div class="hotel-aside-pop-pic"></div>
+									<div class="hotel-aside-pop-text">
+										<span class="hotel-aside-pop-date"><img src="img/news-clock-dark.png" alt="">&nbsp;15.01.2021</span>
+										<h4 class="hotel-aside-pop-title"><a href="#">Novostar Hotels: официальная новостная лента</a></h4>
+									</div>
+								</div>
+								<div class="hotel-aside-pop-item">
+									<div class="hotel-aside-pop-pic"></div>
+									<div class="hotel-aside-pop-text">
+										<span class="hotel-aside-pop-date"><img src="img/news-clock-dark.png" alt="">&nbsp;19.01.2021</span>
+										<h4 class="hotel-aside-pop-title"><a href="#">Идеальный период для отдыха на острове Джерба</a></h4>
+									</div>
+								</div>
+								<div class="hotel-aside-pop-item">
+									<div class="hotel-aside-pop-pic"></div>
+									<div class="hotel-aside-pop-text">
+										<span class="hotel-aside-pop-date"><img src="img/news-clock-dark.png" alt="">&nbsp;14.01.2021</span>
+										<h4 class="hotel-aside-pop-title"><a href="#">Погода в Тунисе в октябре</a></h4>
+									</div>
+								</div>
+								<div class="hotel-aside-pop-item">
+									<div class="hotel-aside-pop-pic"></div>
+									<div class="hotel-aside-pop-text">
+										<span class="hotel-aside-pop-date"><img src="img/news-clock-dark.png" alt="">&nbsp;13.01.2021</span>
+										<h4 class="hotel-aside-pop-title"><a href="#">О стране Тунис</a></h4>
+									</div>
+								</div>
+								<div class="hotel-aside-pop-item">
+									<div class="hotel-aside-pop-pic"></div>
+									<div class="hotel-aside-pop-text">
+										<span class="hotel-aside-pop-date"><img src="img/news-clock-dark.png" alt="">&nbsp;12.01.2021</span>
+										<h4 class="hotel-aside-pop-title"><a href="#">Кому можно въезжать в Тунис?!</a></h4>
+									</div>
+								</div>
+							</div>
+
+							<div class="hotel-alise-banners">
+								<a href="#"><img src="img/hotel/big-banner-1.jpg" alt=""></a>
+								<a href="#"><img src="img/hotel/big-banner-2.jpg" alt=""></a>
+							</div>
+
+						</div><!-- end .hotel-aside-wrap -->
+					</aside>
+				</div><!-- end .hotel-content-wrap -->
+
+				<div class="see-another-hotel">
+					<h3>Посмотреть другой отель</h3>
+					<select>
+						<option value="">Набель | Novostar Khayam Garden Beach & Spa 4*</option>
+						<option value="">Набель | Novostar Budget Pyramides Club & Spa 3*</option>
+						<option value="">Хаммамет | Novostar Vincci Marillia 4*</option>
+						<option value="">Хаммамет | Novostar Bel Azur Thalassa & Bungalows 4*</option>
+						<option value="">Хаммамет | Club Novostar Sol Azur Beach Congres 4*</option>
+						<option value="">Хаммамет | Club Novostar Dar Khayam 3*</option>
+						<option value="">Хаммамет | Club Novostar Omar Khayam Resort & Aqua Park 3*</option>
+						<option value="">Сус | Novostar Royal Beach 3*</option>
+						<option value="" selected="selected">Сус | Novostar Apart Le Monte Carlo, меблированные апартаменты</option>
+						<option value="">Монастир | Novostar Houda Golf Beach & Aquapark 3*</option>
+						<option value="">Джерба | Novostar Iris Hotel & Thalasso 4*</option>
+					</select>
+				</div>
+
+			</div><!-- end .container -->
+		</div><!-- end hotel-page -->
+
+		<footer>
+			<div class="container">
+				<div class="foot-logo-icons">
+					<img src="img/foot-logo.png" alt="" class="foot-logo">
+					<div class="foot-icons">
+						<p>Добавьте нас в соцсетях</p>
+						<a href="#"><img src="img/foot-vk.png" alt=""></a>
+						<a href="#"><img src="img/foot-yt.png" alt=""></a>
+						<a href="#"><img src="img/foot-inst.png" alt=""></a>
+						<a href="#"><img src="img/foot-fb.png" alt=""></a>
+						<a href="#"><img src="img/foot-tg.png" alt=""></a>
+					</div>
+				</div>
+				<div class="foot-podpiska">
+					<h3 class="foot-podpiska-title">Тунисский словарик в подарок</h3>
+					<p class="foot-podpiska-subtitle">при подписке на нашу рассылку</p>
+					<div class="foot-podpiska-pic"><img src="img/tun-slov2.png" alt=""></div>
+					<form action="" class="foot-podpiska-form">
+						<input type="email" name="mail" placeholder="E-mail">
+						<button type="submit" name="submit">ПОДПИСАТЬСЯ</button>
+					</form>
+				</div>
+				<div class="foot-menu">
+					<ul>
+						<li><a href="#">Cookies</a></li>
+						<li><a href="#">Политика пользования сайтом</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Covid-19</a></li>
+						<li><a href="#">Карта сайта</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="copy">
+				Copyright 2021 - Novostar Hotels
+			</div>
+		</footer>
+	</div><!-- end .content-wrap -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/aos.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+</html>
